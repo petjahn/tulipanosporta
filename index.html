@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulipános Porta és Vendégház - Dinnyés</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-green: #4A6B2F;
+            /* Matches logo green */
+            --accent-red: #D32F2F;
+            /* Matches the red decor */
+            --bg-color: #FDFBF7;
+            /* Warm off-white */
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-green);
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 65px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-red);
+        }
+
+        .lang-switch button {
+            background: none;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            padding: 6px 10px;
+            margin-left: 5px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .lang-switch button:hover {
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+        }
+
+        .lang-switch button.active {
+            background-color: var(--primary-green);
+            color: white;
+            border-color: var(--primary-green);
+        }
+
+        /* --- Hero Section --- */
+        header.hero {
+            /* Using the garden image with the sandbox as the hero */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('36848331.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        header.hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        header.hero p {
+            font-size: 1.6rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            max-width: 700px;
+        }
+
+        /* --- Content Sections --- */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-red);
+            margin: 15px auto 0;
+        }
+
+        /* --- About --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            margin-top: 30px;
+            list-style: none;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .features-list li::before {
+            content: '🌷';
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Gallery (FIXED) --- */
+        .gallery-grid {
+            display: grid;
+            /* Creates a responsive grid where items are at least 280px wide */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            /* Forces a nice rectangular aspect ratio for uniformity */
+            aspect-ratio: 4 / 3;
+            background: #f0f0f0;
+            /*Placeholder color while loading*/
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Neatly crops image to fill the box */
+            transition: transform 0.5s ease;
+            /* Smooth zoom */
+            display: block;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+            /* Subtle zoom effect on hover */
+        }
+
+        /* --- Activities --- */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .activity-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--primary-green);
+            transition: transform 0.3s;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .activity-card h3 {
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-size: 1.4rem;
+        }
+
+        /* --- Contact --- */
+        .contact-container {
+            background-color: white;
+            padding: 4rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-details p {
+            margin: 15px 0;
+            font-size: 1.3rem;
+        }
+
+        .contact-details strong {
+            color: var(--primary-green);
+        }
+
+        footer {
+            background-color: var(--primary-green);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            font-weight: 600;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            header.hero {
+                height: 70vh;
+            }
+
+            header.hero h1 {
+                font-size: 2.5rem;
+            }
+
+            header.hero p {
+                font-size: 1.2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                order: -1;
+                /* Put image above text on mobile */
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-container {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img src="logo.png" alt="Tulipános Porta Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#about" id="nav-about">Rólunk</a>
+            <a href="#gallery" id="nav-gallery">Galéria</a>
+            <a href="#activities" id="nav-activities">Programok</a>
+            <a href="#contact" id="nav-contact">Kapcsolat</a>
+        </div>
+        <div class="lang-switch">
+            <button onclick="setLang('hu')" class="active" id="btn-hu">HU</button>
+            <button onclick="setLang('en')" id="btn-en">EN</button>
+            <button onclick="setLang('de')" id="btn-de">DE</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 id="hero-title">Hagyomány és Kényelem a Velencei-tónál</h1>
+        <p id="hero-subtitle">Pihenés Dinnyés szívében, falusi hangulatban.</p>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title" id="title-about">A Vendégházról</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p id="about-desc">
+                    Sok szeretettel várjuk vendégeinket a Tulipános Portán, Dinnyés csendes utcájában.
+                    Vendégházunk egész évben nyitva tart, ötvözve a hagyományos magyar falusi építészet báját a modern
+                    kényelemmel.
+                    A ház egy szobával rendelkezik, amely legfeljebb 4 fő számára biztosít kényelmes pihenést.
+                </p>
+                <ul class="features-list">
+                    <li id="feat-1">Teljesen gyermekbarát környezet</li>
+                    <li id="feat-2">Tágas kert homokozóval és játékokkal</li>
+                    <li id="feat-3">Kerti kád (napkollektoros fűtéssel, napos időben)</li>
+                    <li id="feat-4">Jól felszerelt konyha és étkező</li>
+                    <li id="feat-5">Egész évben foglalható</li>
+                </ul>
+            </div>
+            <div class="about-img">
+                <img src="36848324.jpg" alt="Tulipános Porta konyha">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 class="section-title" id="title-gallery">Galéria</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="3148276.jpeg">
+            </div>
+            <div class="gallery-item">
+                <img src="3148278.jpeg">
+            </div>
+            <div class="gallery-item">
+                <img src="3200916.jpeg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848317.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848318.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848319.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848320.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848321.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848322.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848323.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848324.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848325.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848326.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848327.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848328.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848329.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848330.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848331.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848332.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="36848336.jpg">
+            </div>
+            <div class="gallery-item">
+                <img src="9516573.jpeg">
+            </div>
+            <div class="gallery-item">
+                <img src="9516574.jpeg">
+            </div>
+            <div class="gallery-item">
+                <img src="9516575.jpeg">
+            </div>
+            <div class="gallery-item">
+                <img src="9516576.jpeg">
+            </div>
+        </div>
+    </section>
+
+    <section id="activities">
+        <h2 class="section-title" id="title-activities">Környékbeli Programok</h2>
+        <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;" id="activities-intro">Dinnyés és a
+            Velencei-tó rengeteg élményt kínál minden évszakban.</p>
+
+        <div class="activities-grid">
+            <div class="activity-card">
+                <h3 id="act-1-title">Madárdal Tanösvény</h3>
+                <p id="act-1-desc">Fedezze fel a Dinnyési-fertő gazdag élővilágát egy kellemes túra keretében. Tökéletes
+                    program természetkedvelőknek és családoknak.</p>
+            </div>
+            <div class="activity-card">
+                <h3 id="act-2-title">Kerékpározás a tó körül</h3>
+                <p id="act-2-desc">A Velencei-tó körüli kerékpárút kiváló minőségű és nagyrészt sík terep, így
+                    gyerekekkel is könnyen teljesíthető a tókerülés.</p>
+            </div>
+            <div class="activity-card">
+                <h3 id="act-3-title">Dinnyési Várpark</h3>
+                <p id="act-3-desc">Egyedülálló szabadtéri kiállítás a közelben, amely a történelmi Magyarország várait
+                    mutatja be kőből és fából készült makettek formájában.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title" id="title-contact">Kapcsolat</h2>
+        <div class="contact-container">
+            <div class="contact-details">
+                <p id="contact-name"><strong>Házigazda:</strong> Dr. Barbara Belser</p>
+                <p><strong>Email:</strong> <a href="mailto:info@tulipanosporta.hu"
+                        style="color: var(--primary-green); text-decoration: none;">info@tulipanosporta.hu</a></p>
+                <p><strong>Telefon:</strong> <a href="tel:+36204858993"
+                        style="color: var(--primary-green); text-decoration: none;">+36 20 485 8993</a></p>
+                <p><strong>Cím:</strong> 2485 Gárdony, Dinnyés-Rákóczi utca 9.</p>
+            </div>
+            <br>
+            <iframe
+                src="https://maps.google.com/maps?width=1900&height=400&hl=en&q=47.174241723682975%2C%2018.564711288723284&t=h&z=19&ie=UTF8&iwloc=B&output=embed"
+                width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Tulipános Porta és Vendégház | Dinnyés</p>
+    </footer>
+
+    <script>
+        const translations = {
+            hu: {
+                navAbout: "Rólunk", navGallery: "Galéria", navActivities: "Programok", navContact: "Kapcsolat",
+                heroTitle: "Hagyomány és Kényelem a Velencei-tónál",
+                heroSubtitle: "Pihenés Dinnyés szívében, falusi hangulatban.",
+                titleAbout: "A Vendégházról",
+                aboutDesc: "Sok szeretettel várjuk vendégeinket a Tulipános Portán, Dinnyés csendes utcájában. Vendégházunk egész évben nyitva tart, ötvözve a hagyományos magyar falusi építészet báját a modern kényelemmel. A ház egy szobával rendelkezik, amely legfeljebb 4 fő számára biztosít kényelmes pihenést.",
+                feat1: "Teljesen gyermekbarát környezet",
+                feat2: "Tágas kert homokozóval és játékokkal",
+                feat3: "Kerti kád (napkollektoros fűtéssel, napos időben)",
+                feat4: "Jól felszerelt konyha és étkező",
+                feat5: "Egész évben foglalható",
+                titleGallery: "Galéria",
+                titleActivities: "Környékbeli Programok",
+                activitiesIntro: "Dinnyés és a Velencei-tó rengeteg élményt kínál minden évszakban.",
+                act1Title: "Madárdal Tanösvény",
+                act1Desc: "Fedezze fel a Dinnyési-fertő gazdag élővilágát egy kellemes túra keretében. Tökéletes program természetkedvelőknek és családoknak.",
+                act2Title: "Kerékpározás a tó körül",
+                act2Desc: "A Velencei-tó körüli kerékpárút kiváló minőségű és nagyrészt sík terep, így gyerekekkel is könnyen teljesíthető a tókerülés.",
+                act3Title: "Dinnyési Várpark",
+                act3Desc: "Egyedülálló szabadtéri kiállítás a közelben, amely a történelmi Magyarország várait mutatja be kőből és fából készült makettek formájában.",
+                titleContact: "Kapcsolat",
+                contactName: "<strong>Házigazda:</strong> Dr. Barbara Belser"
+            },
+            en: {
+                navAbout: "About Us", navGallery: "Gallery", navActivities: "Activities", navContact: "Contact",
+                heroTitle: "Tradition and Comfort at Lake Velence",
+                heroSubtitle: "Relaxation in the heart of Dinnyés with a rustic atmosphere.",
+                titleAbout: "About the Guest House",
+                aboutDesc: "We warmly welcome our guests to Tulipános Porta in a quiet street of Dinnyés. Our guest house is open all year round, blending the charm of traditional Hungarian village architecture with modern comfort. The house features one room, providing a comfortable stay for up to 4 people.",
+                feat1: "Completely child-safe environment",
+                feat2: "Spacious garden with a sandbox and toys",
+                feat3: "Garden tub (solar-heated, available in sunny weather)",
+                feat4: "Fully equipped kitchen and dining area",
+                feat5: "Available for booking all year round",
+                titleGallery: "Gallery",
+                titleActivities: "Nearby Activities",
+                activitiesIntro: "Dinnyés and Lake Velence offer plenty of experiences in every season.",
+                act1Title: "Birdsong Nature Trail",
+                act1Desc: "Discover the rich wildlife of the Dinnyés marshlands on a pleasant hike. Perfect for nature lovers and families.",
+                act2Title: "Biking around the Lake",
+                act2Desc: "The bike path around Lake Velence is high quality and mostly flat, making it easy for families to complete the circuit.",
+                act3Title: "Dinnyés Castle Park",
+                act3Desc: "A unique open-air exhibition nearby showcasing models of historical Hungarian castles made of stone and wood.",
+                titleContact: "Contact",
+                contactName: "<strong>Host:</strong> Dr. Barbara Belser"
+            },
+            de: {
+                navAbout: "Über uns", navGallery: "Galerie", navActivities: "Aktivitäten", navContact: "Kontakt",
+                heroTitle: "Tradition und Komfort am Velencer See",
+                heroSubtitle: "Entspannung im Herzen von Dinnyés in ländlicher Atmosphäre.",
+                titleAbout: "Über das Gästehaus",
+                aboutDesc: "Wir heißen unsere Gäste in der Tulipános Porta in einer ruhigen Straße von Dinnyés herzlich willkommen. Unser Gästehaus ist ganzjährig geöffnet und verbindet den Charme der traditionellen ungarischen Dorfarchitektur mit modernem Komfort. Das Haus verfügt über ein Zimmer, das bequem Platz für bis zu 4 Personen bietet.",
+                feat1: "Vollständig kindersichere Umgebung",
+                feat2: "Großer Garten mit Sandkasten und Spielzeug",
+                feat3: "Gartenwanne (solarbeheizt, bei sonnigem Wetter verfügbar)",
+                feat4: "Voll ausgestattete Küche und Essbereich",
+                feat5: "Ganzjährig buchbar",
+                titleGallery: "Galerie",
+                titleActivities: "Aktivitäten in der Nähe",
+                activitiesIntro: "Dinnyés und der Velencer See bieten zu jeder Jahreszeit viele Erlebnisse.",
+                act1Title: "Vogelgesang-Lehrpfad",
+                act1Desc: "Entdecken Sie die reiche Tierwelt des Dinnyés-Sumpfes bei einer angenehmen Wanderung. Perfekt für Naturliebhaber und Familien.",
+                act2Title: "Radfahren um den See",
+                act2Desc: "Der Radweg um den Velencer See ist von hoher Qualität und größtenteils flach, so dass die Seeumrundung auch für Familien leicht zu bewältigen ist.",
+                act3Title: "Burgenpark Dinnyés",
+                act3Desc: "Eine einzigartige Freilichtausstellung in der Nähe, die Modelle historischer ungarischer Burgen aus Stein und Holz zeigt.",
+                titleContact: "Kontakt",
+                contactName: "<strong>Gastgeberin:</strong> Dr. Barbara Belser"
+            }
+        };
+
+        function setLang(lang) {
+            // Update Text Content
+            document.getElementById('nav-about').textContent = translations[lang].navAbout;
+            document.getElementById('nav-gallery').textContent = translations[lang].navGallery;
+            document.getElementById('nav-activities').textContent = translations[lang].navActivities;
+            document.getElementById('nav-contact').textContent = translations[lang].navContact;
+
+            document.getElementById('hero-title').textContent = translations[lang].heroTitle;
+            document.getElementById('hero-subtitle').textContent = translations[lang].heroSubtitle;
+
+            document.getElementById('title-about').textContent = translations[lang].titleAbout;
+            document.getElementById('about-desc').textContent = translations[lang].aboutDesc;
+
+            document.getElementById('feat-1').textContent = translations[lang].feat1;
+            document.getElementById('feat-2').textContent = translations[lang].feat2;
+            document.getElementById('feat-3').textContent = translations[lang].feat3;
+            document.getElementById('feat-4').textContent = translations[lang].feat4;
+            document.getElementById('feat-5').textContent = translations[lang].feat5;
+
+            document.getElementById('title-gallery').textContent = translations[lang].titleGallery;
+
+            document.getElementById('title-activities').textContent = translations[lang].titleActivities;
+            document.getElementById('activities-intro').textContent = translations[lang].activitiesIntro;
+
+            document.getElementById('act-1-title').textContent = translations[lang].act1Title;
+            document.getElementById('act-1-desc').textContent = translations[lang].act1Desc;
+            document.getElementById('act-2-title').textContent = translations[lang].act2Title;
+            document.getElementById('act-2-desc').textContent = translations[lang].act2Desc;
+            document.getElementById('act-3-title').textContent = translations[lang].act3Title;
+            document.getElementById('act-3-desc').textContent = translations[lang].act3Desc;
+
+            document.getElementById('title-contact').textContent = translations[lang].titleContact;
+            document.getElementById('contact-name').innerHTML = translations[lang].contactName;
+
+            // Update Buttons State
+            document.getElementById('btn-hu').classList.remove('active');
+            document.getElementById('btn-en').classList.remove('active');
+            document.getElementById('btn-de').classList.remove('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            // Set lang attribute for accessibility
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+
+</html>
