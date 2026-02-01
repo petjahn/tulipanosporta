@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tulipános Porta és Vendégház - Dinnyés</title>
+    <link rel="icon" href="logo.png">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap"
@@ -268,6 +269,46 @@
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        /* Reviews cards */
+        .reviews-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 700px) {
+            .reviews-grid {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .review-card {
+            background: white;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            max-width: 360px;
+            text-align: left;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .review-meta {
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
         }
 
         .contact-details p {
@@ -617,6 +658,34 @@
             <div id="badge-hu"><a href="https://szallas.hu/tulipanos-porta-es-vendeghaz-dinnyes" style="display: block; width: 200px; height: 220px; text-decoration: none !important;background: #FFF"> <div class="excellent_accommodation_holder" style="width: 198px; height: 218px; border: 1px solid #666; position: relative; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000; text-align: center; line-height: normal !important;"> <div class="excellent_badge" style="background: url(https://s.szalas.hu/images/excellent/hu/479796.gif); width: 192px; height: 145px; margin: 1px auto; padding: 0px;"></div> <div class="excellent_hotel_name" style="width: 194px; height: 30px; overflow: hidden; margin: 0px auto 2px auto; color: #D20000; padding: 0px;"></div> <div class="rating_count_text" style="width: 194px; height: 34px; overflow: hidden; color: #000;"> <script type="text/javascript" src="//szallas.hu/js/excellent/479796"></script> </div> </div> </a></div>
             <div id="badge-en" class="hidden"><a href="https://szallas.hu/tulipanos-porta-es-vendeghaz-dinnyes" style="display: block; width: 200px; height: 220px; text-decoration: none !important;background: #FFF"> <div class="excellent_accommodation_holder" style="width: 198px; height: 218px; border: 1px solid #666; position: relative; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000; text-align: center; line-height: normal !important;"> <div class="excellent_badge" style="background: url(https://s.szalas.hu/images/excellent/en/479796.gif); width: 192px; height: 145px; margin: 1px auto; padding: 0px;"></div> <div class="excellent_hotel_name" style="width: 194px; height: 30px; overflow: hidden; margin: 0px auto 2px auto; color: #D20000; padding: 0px;"></div> <div class="rating_count_text" style="width: 194px; height: 34px; overflow: hidden; color: #000;"> <script type="text/javascript" src="//revngo.com/js/excellent/479796"></script> </div> </div> </a></div>
             <div id="badge-de" class="hidden"><a href="https://szallas.hu/tulipanos-porta-es-vendeghaz-dinnyes" style="display: block; width: 200px; height: 220px; text-decoration: none !important;background: #FFF"> <div class="excellent_accommodation_holder" style="width: 198px; height: 218px; border: 1px solid #666; position: relative; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000; text-align: center; line-height: normal !important;"> <div class="excellent_badge" style="background: url(https://s.szalas.hu/images/excellent/de/479796.gif); width: 192px; height: 145px; margin: 1px auto; padding: 0px;"></div> <div class="excellent_hotel_name" style="width: 194px; height: 30px; overflow: hidden; margin: 0px auto 2px auto; color: #D20000; padding: 0px;"></div> <div class="rating_count_text" style="width: 194px; height: 34px; overflow: hidden; color: #000;"> <script type="text/javascript" src="//de.revngo.com/js/excellent/479796"></script> </div> </div> </a></div>
+        </div>
+
+        <div class="reviews-grid" aria-label="Facebook reviews">
+            <div class="review-card">
+                <p class="review-text">„Két napot, egy éjszakát töltöttünk el a férjemmel ebben a számunkra legcukibb kis parasztházban. 🏚🌷Pöttyös bögre, amiből jóízű a reggeli kávé a jól felszerelt, pöttyös,  kockás textilekkel díszített álomcuki kis konyhában. 🥰 A tulajdonos minden apró részletre odafigyelt. Kreativitása, lelkesedése határtalan! Egyébként nagyon kedves, segítőkész! Gyerekeknek mesekönyvek, társasjátékok, diavetítő és hatalmas füves kert áll rendelkezésre a vidám időtöltéshez. Pároknak is ideális, ha csak egymásra szeretnétek odafigyelni, elvonulni a stresszes mindennapoktól. A házikóban tisztaság és rend uralkodik.
+....és olyan nagyon jó illata van mindennek. 🥰 A háznak, az ágyneműknek, a törölközőnek. Még most is érzem az orromban! 😊🌷 Ha kedved van, körbebiciklizheted a Velencei- tavat is, vagy beugrasz a közeli Várparkot megcsodálni. 
+Szóval ha egy mesebeli házikóra vágysz, akkor ez a Te szálláshelyed is lehet! 🏚🌷🥰”</p>
+                <div class="review-meta"><span class="review-author">F. Viki</span><a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">„Ha csak egy szóval lehetne jellemezni a helyet, azt írnám: csoda!! 
+Negyedszerre voltunk a családommal, de nem lehet megunni. Jövőre (és az után) újra megyünk.
+Csend, nyugalom, gyönyörű ház és udvar, maximális tisztaság!
+A házigazda, Erika, pedig nagyon nagyon kedves, és segítőkész! 
+Ajánlani tudom csak mindenkinek!"</p>
+                <div class="review-meta"><span class="review-author">Sz-K. Veronika</span><a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+            </div>
+
+            <div class="review-card">
+                <p class="review-text">„Sajnos csak 5 csillagot tudunk adni, különben 10-et is adnánk.
+Az emlékkönyvben leírtuk azt, amit a helytől és tulajdonosától kaptunk, de röviden itt is leírjuk.
+Tiszta, nyugodt és csendes környezet várt minket, egy végtelenül kedves, barátságos tulajdonossal együtt.
+A házikó olyan otthonos volt, ahol szívünk szerint el is éldegélnénk, nem csak pár napig. 
+Akár gyerekkel, akár anélkül, mindenkinek ajánljuk és amint tehetjük, visszatérünk, csak ne akkor foglaljátok le, amikor mi szeretnénk. 😉
+Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és sok sikert a továbbiakban! Remélhetőleg, hamarosan találkozunk! 😊 üdv, Viki, Laci 🤗 és Inge 🐾"</p>
+                <div class="review-meta"><span class="review-author">V. Viktória Anna</span><a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+            </div>
         </div>
     </section>
 
