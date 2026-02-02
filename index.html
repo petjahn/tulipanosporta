@@ -456,6 +456,7 @@
         <div class="nav-links">
             <a href="#about" id="nav-about">Rólunk</a>
             <a href="#gallery" id="nav-gallery">Galéria</a>
+            <a href="#prices" id="nav-prices">Árak</a>
             <a href="#activities" id="nav-activities">Programok</a>
             <a href="#contact" id="nav-contact">Kapcsolat</a>
             <a href="#contact-us" id="nav-contact-us">Írjon nekünk</a>
@@ -598,6 +599,17 @@
         </div>
     </section>
 
+    <section id="prices">
+        <h2 class="section-title" id="title-prices">Árak</h2>
+        <div class="contact-container">
+            <ul style="list-style: none; padding: 0; font-size: 1.15rem; text-align: left;">
+                <li id="price-line-1">Előszezon: 01.01-04.15: 34.000 Ft / nap</li>
+                <li id="price-line-2">Főszezon:  04.16-10.15: 40.000 Ft / nap</li>
+                <li id="price-line-3">Utószezon: 10.15-12.31: 34.000 Ft / nap</li>
+            </ul>
+            <p id="price-note" style="margin-top:12px;">Az árak nem tartalmazzák az idegenforgalmi adót (650 Ft/nap 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak.</p>
+        </div>
+
     <section id="contact">
         <h2 class="section-title" id="title-contact">Kapcsolat</h2>
         <div class="contact-container">
@@ -696,7 +708,7 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
     <script>
         const translations = {
             hu: {
-                navAbout: "Rólunk", navGallery: "Galéria", navActivities: "Programok", navContact: "Kapcsolat", navContactUs: "Írjon nekünk",
+                navAbout: "Rólunk", navGallery: "Galéria", navPrices: "Árak", navActivities: "Programok", navContact: "Kapcsolat", navContactUs: "Írjon nekünk",
                 heroTitle: "Hagyomány és Kényelem a Velencei-tónál",
                 heroSubtitle: "Pihenés Dinnyés szívében, falusi hangulatban.",
                 titleAbout: "A Vendégházról",
@@ -729,10 +741,15 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 contactUsSubjectPlaceholder: "Például foglalás kérdése",
                 contactUsMessagePlaceholder: "Üzenet... (minimum 10 karakter)",
                 contactUsThankYou: "Köszönjük, hogy kapcsolatba lépett velünk! Hamarosan válaszolunk.",
-                contactUsError: "Hiba történt az üzenet küldése során. Kérjük, próbálja meg később újra."
+                contactUsError: "Hiba történt az üzenet küldése során. Kérjük, próbálja meg később újra.",
+                titlePrices: "Árak",
+                priceLine1: "Előszezon (01.01-04.15): 34.000 Ft / nap",
+                priceLine2: "Főszezon (04.16-10.15): 40.000 Ft / nap",
+                priceLine3: "Utószezon (10.15-12.31): 34.000 Ft / nap",
+                priceNote: "Az árak nem tartalmazzák az idegenforgalmi adót (650 Ft/nap 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak."
             },
             en: {
-                navAbout: "About Us", navGallery: "Gallery", navActivities: "Activities", navContact: "Contact", navContactUs: "Contact Us",
+                navAbout: "About Us", navGallery: "Gallery", navPrices: "Prices", navActivities: "Activities", navContact: "Contact", navContactUs: "Contact Us",
                 heroTitle: "Tradition and Comfort at Lake Velence",
                 heroSubtitle: "Relaxation in the heart of Dinnyés with a rustic atmosphere.",
                 titleAbout: "About the Guest House",
@@ -765,10 +782,15 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 contactUsSubjectPlaceholder: "e.g. Booking Inquiry",
                 contactUsMessagePlaceholder: "Message... (min. 10 characters)",
                 contactUsThankYou: "Thank you for reaching out! We will get back to you soon.",
-                contactUsError: "An error occurred while sending your message. Please try again later."
+                contactUsError: "An error occurred while sending your message. Please try again later.",
+                titlePrices: "Prices",
+                priceLine1: "Pre-season (01.01-04.15): 34.000 Ft / day",
+                priceLine2: "Season (04.16-10.15): 40.000 Ft / day",
+                priceLine3: "Post-season (10.15-12.31): 34.000 Ft / day",
+                priceNote: "Prices do not include tourist tax (650 Ft/day for guests older than 18 years) and are for the entire house."
             },
             de: {
-                navAbout: "Über uns", navGallery: "Galerie", navActivities: "Aktivitäten", navContact: "Kontakt", navContactUs: "Kontaktieren Sie uns",
+                navAbout: "Über uns", navGallery: "Galerie", navPrices: "Preise", navActivities: "Aktivitäten", navContact: "Kontakt", navContactUs: "Kontaktieren Sie uns",
                 heroTitle: "Tradition und Komfort am Velencer See",
                 heroSubtitle: "Entspannung im Herzen von Dinnyés in ländlicher Atmosphäre.",
                 titleAbout: "Über das Gästehaus",
@@ -801,7 +823,12 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 contactUsSubjectPlaceholder: "z.B. Buchungsanfrage",
                 contactUsMessagePlaceholder: "Nachricht... (min. 10 Zeichen)",
                 contactUsThankYou: "Vielen Dank für Ihre Kontaktaufnahme! Wir werden uns in Kürze bei Ihnen melden.",
-                contactUsError: "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+                contactUsError: "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
+                titlePrices: "Preise",
+                priceLine1: "Vorsaison (01.01-04.15): 34.000 Ft / Tag",
+                priceLine2: "Saison (04.16-10.15): 40.000 Ft / Tag",
+                priceLine3: "Nachsaison (10.15-12.31): 34.000 Ft / Tag",
+                priceNote: "Die Preise verstehen sich zzgl. Kurtaxe (650 Ft/Tag für Gäste über 18 Jahre) und gelten für das gesamte Haus."
             }
         };
 
@@ -812,6 +839,7 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
             document.getElementById('nav-activities').textContent = translations[lang].navActivities;
             document.getElementById('nav-contact').textContent = translations[lang].navContact;
             document.getElementById('nav-contact-us').textContent = translations[lang].navContactUs;
+            document.getElementById('nav-prices').textContent = translations[lang].navPrices;
             
             document.getElementById('hero-title').textContent = translations[lang].heroTitle;
             document.getElementById('hero-subtitle').textContent = translations[lang].heroSubtitle;
@@ -826,6 +854,11 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
             document.getElementById('feat-5').textContent = translations[lang].feat5;
 
             document.getElementById('title-gallery').textContent = translations[lang].titleGallery;
+            document.getElementById('title-prices').textContent = translations[lang].titlePrices;
+            document.getElementById('price-line-1').textContent = translations[lang].priceLine1;
+            document.getElementById('price-line-2').textContent = translations[lang].priceLine2;
+            document.getElementById('price-line-3').textContent = translations[lang].priceLine3;
+            document.getElementById('price-note').textContent = translations[lang].priceNote;
 
             document.getElementById('title-activities').textContent = translations[lang].titleActivities;
             document.getElementById('activities-intro').textContent = translations[lang].activitiesIntro;
