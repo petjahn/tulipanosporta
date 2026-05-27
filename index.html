@@ -662,7 +662,7 @@
             <div style="display:flex;align-items:center;gap:12px;">
                 <button id="contact-us-submit" type="submit">Küldés</button>
                 <div id="form-feedback" class="form-feedback" aria-live="polite">
-                      <p id="contact-form-status"></p>
+                      <p id="contact-form-status" style="color:red"></p>
                 </div>
             </div>
         </form>
@@ -915,7 +915,7 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
         }
 
         var form = document.getElementById("contact-form");
-        var status = document.getElementById("contact-form-status");
+        setLang('hu')
   
         async function handleSubmit(event) {
             event.preventDefault();
@@ -929,18 +929,18 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
             }).then(response => {
             if (response.ok) {
                 form.reset()
-                status.innerHTML = translations[lang].contactUsThankYou;
+                document.getElementById("contact-form-status").innerHTML = translations[document.documentElement.lang].contactUsThankYou;
             } else {
                 response.json().then(data => {
                 if (Object.hasOwn(data, 'errors')) {
-                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                    document.getElementById("contact-form-status").innerHTML = data["errors"].map(error => error["message"]).join(", ")
                 } else {
-                    status.innerHTML = translations[lang].contactUsError;
+                    document.getElementById("contact-form-status").innerHTML = translations[document.documentElement.lang].contactUsError;
                 }
                 })
             }
             }).catch(error => {
-            status.innerHTML = translations[lang].contactUsError;
+            document.getElementById("contact-form-status").innerHTML = translations[document.documentElement.lang].contactUsError;
             });
         }
         form.addEventListener("submit", handleSubmit)
