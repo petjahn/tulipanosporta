@@ -607,7 +607,7 @@
                 <li id="price-line-2">Főszezon:  04.16-10.15: 40.000 Ft / nap</li>
                 <li id="price-line-3">Utószezon: 10.15-12.31: 34.000 Ft / nap</li>
             </ul>
-            <p id="price-note" style="margin-top:12px;">Az árak nem tartalmazzák az idegenforgalmi adót (650 Ft/nap 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak.</p>
+            <p id="price-note" style="margin-top:12px;">Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/nap 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak.</p>
         </div>
 
     <section id="contact">
@@ -643,11 +643,15 @@
                     <label id="contact-us-email" for="email">Email</label>
                     <input type="email" id="email" name="email" required placeholder="email@pelda.hu">
                 </div>
+                <div>
+                    <label id="contact-us-tel" for="telephone">Mobil Telefonszám</label>
+                    <input type="text" id="telephone" name="telephone" required placeholder="+36 30 123 4567">
+                </div>
             </div>
 
             <div>
                 <label id="contact-us-subject" for="subject">Tárgy (opcionális)</label>
-                <input type="text" id="subject" name="subject" placeholder="Pl. Foglalás kérdés">
+                <input type="text" id="subject" name="subject" placeholder="Pl. Foglalás">
             </div>
 
             <div>
@@ -735,9 +739,11 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 contactUsName: "Név",
                 contactUsSubject: "Tárgy (opcionális)",
                 contactUsMessage: "Üzenet",
+                contactUsTel: "Mobil Telefonszám",
                 contactUsSubmit: "Küldés",
                 contactUsEmailPlaceholder: "email@pelda.hu",
                 contactUsNamePlaceholder: "Teljes név",
+                contactUsTelPlaceholder: "+36 30 123 4567",
                 contactUsSubjectPlaceholder: "Például foglalás kérdése",
                 contactUsMessagePlaceholder: "Üzenet... (minimum 10 karakter)",
                 contactUsThankYou: "Köszönjük, hogy kapcsolatba lépett velünk! Hamarosan válaszolunk.",
@@ -746,7 +752,7 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 priceLine1: "Előszezon (01.01-04.15): 34.000 Ft / nap",
                 priceLine2: "Főszezon (04.16-10.15): 40.000 Ft / nap",
                 priceLine3: "Utószezon (10.15-12.31): 34.000 Ft / nap",
-                priceNote: "Az árak nem tartalmazzák az idegenforgalmi adót (650 Ft/nap 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak."
+                priceNote: "Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/nap 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak."
             },
             en: {
                 navAbout: "About Us", navGallery: "Gallery", navPrices: "Prices", navActivities: "Activities", navContact: "Contact", navContactUs: "Contact Us",
@@ -776,9 +782,11 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 contactUsName: "Name",
                 contactUsSubject: "Subject (optional)",
                 contactUsMessage: "Message",
+                contactUsTel: "Mobile",
                 contactUsSubmit: "Send",
                 contactUsEmailPlaceholder: "email@example.com",
                 contactUsNamePlaceholder: "Full Name",
+                contactUsTelPlaceholder: "+36 30 123 4567",
                 contactUsSubjectPlaceholder: "e.g. Booking Inquiry",
                 contactUsMessagePlaceholder: "Message... (min. 10 characters)",
                 contactUsThankYou: "Thank you for reaching out! We will get back to you soon.",
@@ -787,7 +795,7 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 priceLine1: "Pre-season (01.01-04.15): 34.000 Ft / day",
                 priceLine2: "Season (04.16-10.15): 40.000 Ft / day",
                 priceLine3: "Post-season (10.15-12.31): 34.000 Ft / day",
-                priceNote: "Prices do not include tourist tax (650 Ft/day for guests older than 18 years) and are for the entire house."
+                priceNote: "Prices do not include tourist tax (600 Ft/day for guests older than 18 years) and are for the entire house."
             },
             de: {
                 navAbout: "Über uns", navGallery: "Galerie", navPrices: "Preise", navActivities: "Aktivitäten", navContact: "Kontakt", navContactUs: "Kontaktieren Sie uns",
@@ -817,9 +825,11 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 contactUsName: "Name",
                 contactUsSubject: "Subject (optional)",
                 contactUsMessage: "Message",
+                contactUsTel: "Mobile",
                 contactUsSubmit: "Senden",
                 contactUsEmailPlaceholder: "email@beispiel.de",
                 contactUsNamePlaceholder: "Vollständiger Name",
+                contactUsTelPlaceholder: "+36 30 123 4567",
                 contactUsSubjectPlaceholder: "z.B. Buchungsanfrage",
                 contactUsMessagePlaceholder: "Nachricht... (min. 10 Zeichen)",
                 contactUsThankYou: "Vielen Dank für Ihre Kontaktaufnahme! Wir werden uns in Kürze bei Ihnen melden.",
@@ -828,7 +838,7 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 priceLine1: "Vorsaison (01.01-04.15): 34.000 Ft / Tag",
                 priceLine2: "Saison (04.16-10.15): 40.000 Ft / Tag",
                 priceLine3: "Nachsaison (10.15-12.31): 34.000 Ft / Tag",
-                priceNote: "Die Preise verstehen sich zzgl. Kurtaxe (650 Ft/Tag für Gäste über 18 Jahre) und gelten für das gesamte Haus."
+                priceNote: "Die Preise verstehen sich zzgl. Kurtaxe (600 Ft/Tag für Gäste über 18 Jahre) und gelten für das gesamte Haus."
             }
         };
 
@@ -895,11 +905,13 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
             document.getElementById('contact-us-subject').textContent = translations[lang].contactUsSubject;
             document.getElementById('contact-us-message').textContent = translations[lang].contactUsMessage;
             document.getElementById('contact-us-submit').textContent = translations[lang].contactUsSubmit;
+            document.getElementById('contact-us-tel').textContent = translations[lang].contactUsTel;
 
             document.getElementById('email').placeholder = translations[lang].contactUsEmailPlaceholder;
             document.getElementById('name').placeholder = translations[lang].contactUsNamePlaceholder;
             document.getElementById('subject').placeholder = translations[lang].contactUsSubjectPlaceholder;
-            document.getElementById('message').placeholder = translations[lang].contactUsMessagePlaceholder
+            document.getElementById('message').placeholder = translations[lang].contactUsMessagePlaceholder;
+            document.getElementById('telephone').placeholder = translations[lang].contactUsTelPlaceholder;
         }
 
         var form = document.getElementById("contact-form");
