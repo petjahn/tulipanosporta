@@ -915,10 +915,10 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
         }
 
         var form = document.getElementById("contact-form");
+        var status = document.getElementById("contact-form-status");
   
         async function handleSubmit(event) {
             event.preventDefault();
-            var status = document.getElementById("contact-form-status");
             var data = new FormData(event.target);
             fetch(event.target.action, {
             method: form.method,
