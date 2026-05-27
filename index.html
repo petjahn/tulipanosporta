@@ -928,8 +928,8 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
             }
             }).then(response => {
             if (response.ok) {
-                status.innerHTML = translations[lang].contactUsThankYou;
                 form.reset()
+                status.innerHTML = translations[lang].contactUsThankYou;
             } else {
                 response.json().then(data => {
                 if (Object.hasOwn(data, 'errors')) {
