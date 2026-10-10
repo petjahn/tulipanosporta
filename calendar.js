@@ -68,8 +68,8 @@
             today: 'Ma',
             prevMonth: 'Előző hónap',
             nextMonth: 'Következő hónap',
-            syncLive: 'Google Naptár szinkronizálva',
-            syncDemo: 'Példa foglaltsági adatok',
+            syncLive: 'Naptár szinkronizálva',
+            syncDemo: 'Hiba a naptár betöltésekor. A tényleges foglaltsági adatok nem látszanak, de érdeklődését továbbra is szívesen fogadjuk.',
             legendAvailable: 'Szabad',
             legendBooked: 'Foglalt',
             legendCheckIn: 'Érkezési nap (délután)',
@@ -108,8 +108,8 @@ Kérném az időpont megerősítését és a foglalás részleteit.
             today: 'Today',
             prevMonth: 'Previous month',
             nextMonth: 'Next month',
-            syncLive: 'Google Calendar synced',
-            syncDemo: 'Demo availability data',
+            syncLive: 'Calendar synced',
+            syncDemo: 'Error loading calendar data. The actual availability data is not visible, but we are still happy to receive your inquiry.',
             legendAvailable: 'Available',
             legendBooked: 'Booked',
             legendCheckIn: 'Check-in day (afternoon)',
@@ -148,8 +148,8 @@ Kind regards,`
             today: 'Heute',
             prevMonth: 'Vorheriger Monat',
             nextMonth: 'Nächster Monat',
-            syncLive: 'Google Kalender synchronisiert',
-            syncDemo: 'Beispiel-Belegungsdaten',
+            syncLive: 'Kalender synchronisiert',
+            syncDemo: 'Fehler beim Laden des Kalenders. Die tatsächlichen Belegungsdaten sind nicht sichtbar, aber wir freuen uns weiterhin über Ihre Anfrage.',
             legendAvailable: 'Frei',
             legendBooked: 'Belegt',
             legendCheckIn: 'Anreisetag (Nachmittag)',
@@ -428,21 +428,7 @@ Mit freundlichen Grüßen,`
         }
 
         // Demo fallback: realistic bookings around current date
-        console.info('[Tulipános Porta Calendar] Using demo availability bookings. Set calendarId in calendar.js for live Google Calendar sync.');
-        const today = parseDateKey(getTodayKey());
-        const y = today.getFullYear();
-        const m = today.getMonth() + 1;
-
-        // Generate sample bookings for testing
-        state.bookings = [
-            { arrival: formatDateKey(y, m, 12), leave: formatDateKey(y, m, 16), summary: 'Booking' },
-            { arrival: formatDateKey(y, m, 16), leave: formatDateKey(y, m, 19), summary: 'Booking' },
-            { arrival: formatDateKey(y, m, 24), leave: formatDateKey(y, m, 27), summary: 'Booking' },
-            { arrival: formatDateKey(y, m + 1 > 12 ? y + 1 : y, (m % 12) + 1, 5), leave: formatDateKey(y, m + 1 > 12 ? y + 1 : y, (m % 12) + 1, 9), summary: 'Booking' },
-            { arrival: formatDateKey(y, m + 1 > 12 ? y + 1 : y, (m % 12) + 1, 14), leave: formatDateKey(y, m + 1 > 12 ? y + 1 : y, (m % 12) + 1, 18), summary: 'Booking' }
-        ];
-        state.isLiveSynced = false;
-        rebuildBookingSets();
+        console.warn('Could not fetch booking calendar data.');
         renderCalendar();
     }
 
