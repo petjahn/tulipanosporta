@@ -1,0 +1,575 @@
+/* ==========================================================================
+   Tulipános Porta - Booking Availability Calendar Styles
+   ========================================================================== */
+
+.booking-section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.booking-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ebeee8;
+    padding: 2.5rem;
+    margin: 0 auto;
+    max-width: 1050px;
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #f0f2ed;
+}
+
+.booking-title-group h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    color: var(--primary-green, #4A6B2F);
+    margin-bottom: 4px;
+}
+
+.booking-title-group p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.calendar-sync-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: #f3f7ee;
+    color: var(--primary-green, #4A6B2F);
+    border: 1px solid #dbe6d1;
+    transition: all 0.3s ease;
+}
+
+.calendar-sync-badge .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+    animation: pulse-dot 2s infinite ease-in-out;
+}
+
+.calendar-sync-badge.demo-mode {
+    background-color: #fff9e6;
+    color: #8c6d1f;
+    border-color: #fae19c;
+}
+
+.calendar-sync-badge.demo-mode .dot {
+    background-color: #f59e0b;
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+@keyframes pulse-dot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+/* --- Calendar Navigation & Months Grid --- */
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-nav-btn {
+    background: #ffffff;
+    border: 1px solid #d5decb;
+    color: var(--primary-green, #4A6B2F);
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.calendar-nav-btn:hover:not(:disabled) {
+    background: var(--primary-green, #4A6B2F);
+    color: #ffffff;
+    border-color: var(--primary-green, #4A6B2F);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(74, 107, 47, 0.2);
+}
+
+.calendar-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    background: #f5f5f5;
+    border-color: #ddd;
+}
+
+.calendar-today-btn {
+    background: #ffffff;
+    border: 1px solid #d5decb;
+    color: var(--primary-green, #4A6B2F);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.calendar-today-btn:hover {
+    background: #f3f7ee;
+    border-color: var(--primary-green, #4A6B2F);
+}
+
+.months-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    transition: opacity 0.25s ease;
+}
+
+.month-card {
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.month-card-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.15rem;
+    color: var(--primary-green, #4A6B2F);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.weekdays-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #7b8a71;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f0f3ec;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+/* Empty placeholder for padding before 1st day */
+.day-cell.empty {
+    background: transparent;
+    border: none;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Base Day Cell */
+.day-cell {
+    aspect-ratio: 1;
+    min-height: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 0.92rem;
+    font-weight: 600;
+    background: #ffffff;
+    border: 1px solid #e7ebe1;
+    color: var(--text-color, #333);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.18s ease;
+}
+
+.day-cell .day-number {
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Today indicator */
+.day-cell.is-today::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--primary-green, #4A6B2F);
+    z-index: 2;
+}
+
+/* Past Dates */
+.day-cell.is-past {
+    background: #f7f8f6;
+    border-color: #ebeee8;
+    color: #bbb;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Available Day */
+.day-cell.is-available:hover {
+    border-color: var(--primary-green, #4A6B2F);
+    background-color: #f4f8ef;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(74, 107, 47, 0.12);
+}
+
+/* Fully Booked Day */
+.day-cell.is-booked {
+    background-color: #FDE8E6;
+    border-color: #F8B4B4;
+    color: #A92626;
+    cursor: not-allowed;
+}
+
+.day-cell.is-booked:hover {
+    background-color: #fcd5ce;
+}
+
+/* Check-in Day (Arrival: free in morning, booked in afternoon) */
+.day-cell.is-arrival {
+    background: linear-gradient(135deg, #ffffff 49%, #FDE8E6 51%);
+    border-color: #F8B4B4;
+    color: #333;
+    cursor: pointer;
+}
+
+.day-cell.is-arrival:hover {
+    box-shadow: 0 4px 8px rgba(169, 38, 38, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Check-out Day (Departure: booked in morning, free in afternoon) */
+.day-cell.is-leave {
+    background: linear-gradient(135deg, #FDE8E6 49%, #ffffff 51%);
+    border-color: #F8B4B4;
+    color: #333;
+    cursor: pointer;
+}
+
+.day-cell.is-leave:hover {
+    box-shadow: 0 4px 8px rgba(74, 107, 47, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Turnover Day (Check-out in morning, check-in in afternoon) */
+.day-cell.is-turnover {
+    background: #FDE8E6;
+    border: 2px dashed #D32F2F;
+    color: #A92626;
+    cursor: not-allowed;
+}
+
+/* --- Selected Range Highlight --- */
+.day-cell.is-range-start {
+    background: var(--primary-green, #4A6B2F) !important;
+    color: #ffffff !important;
+    border-color: var(--primary-green, #4A6B2F) !important;
+    border-radius: 8px 0 0 8px !important;
+    box-shadow: 0 4px 10px rgba(74, 107, 47, 0.35);
+    z-index: 3;
+}
+
+.day-cell.is-range-start.is-today::after {
+    background-color: #ffffff;
+}
+
+.day-cell.is-range-end {
+    background: var(--primary-green, #4A6B2F) !important;
+    color: #ffffff !important;
+    border-color: var(--primary-green, #4A6B2F) !important;
+    border-radius: 0 8px 8px 0 !important;
+    box-shadow: 0 4px 10px rgba(74, 107, 47, 0.35);
+    z-index: 3;
+}
+
+.day-cell.is-range-end.is-today::after {
+    background-color: #ffffff;
+}
+
+.day-cell.is-range-start.is-range-end {
+    border-radius: 8px !important;
+}
+
+.day-cell.is-in-range {
+    background: #EBF3E5 !important;
+    color: #2F4D18 !important;
+    border-color: #d7e4cc !important;
+    border-radius: 0 !important;
+}
+
+.day-cell.is-range-hover {
+    background: #F2F7ED !important;
+    border-color: #9ab48a !important;
+}
+
+/* --- Calendar Legend --- */
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f2ed;
+    font-size: 0.88rem;
+    color: #555;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.legend-box.available {
+    background: #ffffff;
+    border-color: #dbe2d4;
+}
+
+.legend-box.booked {
+    background: #FDE8E6;
+    border-color: #F8B4B4;
+}
+
+.legend-box.arrival {
+    background: linear-gradient(135deg, #ffffff 49%, #FDE8E6 51%);
+    border-color: #F8B4B4;
+}
+
+.legend-box.leave {
+    background: linear-gradient(135deg, #FDE8E6 49%, #ffffff 51%);
+    border-color: #F8B4B4;
+}
+
+.legend-box.selected {
+    background: var(--primary-green, #4A6B2F);
+    border-color: var(--primary-green, #4A6B2F);
+}
+
+/* --- Interactive Booking Selection Card --- */
+.booking-action-card {
+    margin-top: 2rem;
+    background: #FBFDF9;
+    border: 1px solid #DCE6D5;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.booking-action-card.has-selection {
+    background: #F6FAF2;
+    border-color: #C6DDBA;
+    box-shadow: 0 4px 15px rgba(74, 107, 47, 0.08);
+}
+
+.booking-selection-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.selection-dates-summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.selection-pill {
+    display: inline-flex;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #d7e0d1;
+    font-size: 0.85rem;
+}
+
+.selection-pill-label {
+    font-size: 0.75rem;
+    color: #6d7d63;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.selection-pill-val {
+    font-weight: 700;
+    color: var(--text-color, #333);
+    font-size: 0.95rem;
+}
+
+.selection-pricing {
+    background: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #d7e0d1;
+    text-align: right;
+}
+
+.selection-pricing-label {
+    font-size: 0.78rem;
+    color: #6d7d63;
+}
+
+.selection-pricing-amount {
+    font-family: 'Merriweather', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-green, #4A6B2F);
+}
+
+.selection-pricing-tax {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+.selection-prompt-msg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #5d6d53;
+    font-size: 0.95rem;
+}
+
+.selection-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-book-now {
+    background: var(--primary-green, #4A6B2F);
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(74, 107, 47, 0.25);
+}
+
+.btn-book-now:hover:not(:disabled) {
+    background: #3c5925;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(74, 107, 47, 0.35);
+}
+
+.btn-book-now:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn-clear-selection {
+    background: transparent;
+    color: #666;
+    border: 1px solid #ccd5c5;
+    padding: 11px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-clear-selection:hover {
+    background: #ffffff;
+    color: var(--accent-red, #D32F2F);
+    border-color: var(--accent-red, #D32F2F);
+}
+
+.booking-alert {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: #fde8e8;
+    color: #c81e1e;
+    border: 1px solid #f8b4b4;
+    display: none;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 820px) {
+    .booking-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .months-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    /* Only show first month on small screens */
+    .month-card:nth-child(2) {
+        display: none;
+    }
+
+    .calendar-legend {
+        gap: 12px;
+        font-size: 0.8rem;
+    }
+
+    .booking-selection-info {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .selection-pricing {
+        text-align: left;
+    }
+}

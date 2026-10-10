@@ -1,0 +1,4 @@
+# Netlify Redirects
+# Proxy public Google Calendar iCal to bypass CORS in the browser
+/api/calendar/:calendarId  https://calendar.google.com/calendar/ical/:calendarId/public/basic.ics  200!
+/api/calendar/*            https://calendar.google.com/calendar/ical/:splat                        200!
