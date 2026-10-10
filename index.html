@@ -85,9 +85,10 @@
     }
     </script>
 
-    <!-- ===== Performance: font preconnect ===== -->
+    <!-- ===== Performance: font preconnect & LCP preload ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="36848331.webp" type="image/webp" fetchpriority="high">
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap"
         rel="stylesheet">
@@ -193,6 +194,7 @@
         header.hero {
             /* Using the garden image with the sandbox as the hero */
             background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('36848331.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('36848331.webp');
             background-size: cover;
             background-position: center;
             height: 85vh;
@@ -276,8 +278,13 @@
             font-size: 1.2rem;
         }
 
+        .about-img picture,
         .about-img img {
             width: 100%;
+            display: block;
+        }
+
+        .about-img img {
             border-radius: 12px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
@@ -299,6 +306,12 @@
             aspect-ratio: 4 / 3;
             background: #f0f0f0;
             /*Placeholder color while loading*/
+        }
+
+        .gallery-item picture {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
 
         .gallery-item img {
@@ -533,7 +546,10 @@
 
     <nav>
         <div class="logo-container">
-            <img src="logo.png" alt="Tulipános Porta Logo">
+            <picture>
+                <source srcset="logo.webp" type="image/webp">
+                <img src="logo.png" alt="Tulipános Porta Logo" width="65" height="65">
+            </picture>
         </div>
         <div class="nav-links">
             <a href="#about" id="nav-about">Rólunk</a>
@@ -575,7 +591,10 @@
                 </ul>
             </div>
             <div class="about-img">
-                <img src="36848324.jpg" alt="Tulipános Porta konyha">
+                <picture>
+                    <source srcset="36848324.webp" type="image/webp">
+                    <img src="36848324.jpg" alt="Tulipános Porta konyha" loading="lazy">
+                </picture>
             </div>
         </div>
     </section>
@@ -584,76 +603,148 @@
         <h2 class="section-title" id="title-gallery">Galéria</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="3148276.jpeg" alt="Tulipános Porta vendégház – kültéri nézet" loading="lazy">
+                <picture>
+                    <source srcset="3148276.webp" type="image/webp">
+                    <img src="3148276.jpeg" alt="Tulipános Porta vendégház – kültéri nézet" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="3148278.jpeg" alt="Tulipános Porta – hagyományos falusi ház" loading="lazy">
+                <picture>
+                    <source srcset="3148278.webp" type="image/webp">
+                    <img src="3148278.jpeg" alt="Tulipános Porta – hagyományos falusi ház" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="3200916.jpeg" alt="Tulipános Porta – kert és udvar" loading="lazy">
+                <picture>
+                    <source srcset="3200916.webp" type="image/webp">
+                    <img src="3200916.jpeg" alt="Tulipános Porta – kert és udvar" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848317.jpg" alt="Vendégház szoba – belső kialakítás" loading="lazy">
+                <picture>
+                    <source srcset="36848317.webp" type="image/webp">
+                    <img src="36848317.jpg" alt="Vendégház szoba – belső kialakítás" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848318.jpg" alt="Tulipános Porta – hálószoba" loading="lazy">
+                <picture>
+                    <source srcset="36848318.webp" type="image/webp">
+                    <img src="36848318.jpg" alt="Tulipános Porta – hálószoba" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848319.jpg" alt="Vendégház konyha – felszerelt konyha" loading="lazy">
+                <picture>
+                    <source srcset="36848319.webp" type="image/webp">
+                    <img src="36848319.jpg" alt="Vendégház konyha – felszerelt konyha" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848320.jpg" alt="Tulipános Porta – nappali és pihenő" loading="lazy">
+                <picture>
+                    <source srcset="36848320.webp" type="image/webp">
+                    <img src="36848320.jpg" alt="Tulipános Porta – nappali és pihenő" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848321.jpg" alt="Vendégház – fürdőszoba" loading="lazy">
+                <picture>
+                    <source srcset="36848321.webp" type="image/webp">
+                    <img src="36848321.jpg" alt="Vendégház – fürdőszoba" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848322.jpg" alt="Tulipános Porta – kerti kád" loading="lazy">
+                <picture>
+                    <source srcset="36848322.webp" type="image/webp">
+                    <img src="36848322.jpg" alt="Tulipános Porta – kerti kád" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848323.jpg" alt="Vendégház kert – homokozó és játszótér" loading="lazy">
+                <picture>
+                    <source srcset="36848323.webp" type="image/webp">
+                    <img src="36848323.jpg" alt="Vendégház kert – homokozó és játszótér" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848324.jpg" alt="Tulipános Porta – tágas kert" loading="lazy">
+                <picture>
+                    <source srcset="36848324.webp" type="image/webp">
+                    <img src="36848324.jpg" alt="Tulipános Porta – tágas kert" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848325.jpg" alt="Dinnyési vendégház – napsugaras terasz" loading="lazy">
+                <picture>
+                    <source srcset="36848325.webp" type="image/webp">
+                    <img src="36848325.jpg" alt="Dinnyési vendégház – napsugaras terasz" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848326.jpg" alt="Tulipános Porta – hagyományos tárgyak" loading="lazy">
+                <picture>
+                    <source srcset="36848326.webp" type="image/webp">
+                    <img src="36848326.jpg" alt="Tulipános Porta – hagyományos tárgyak" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848327.jpg" alt="Vendégház – falusi hangulat" loading="lazy">
+                <picture>
+                    <source srcset="36848327.webp" type="image/webp">
+                    <img src="36848327.jpg" alt="Vendégház – falusi hangulat" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848328.jpg" alt="Tulipános Porta – szoba részlet" loading="lazy">
+                <picture>
+                    <source srcset="36848328.webp" type="image/webp">
+                    <img src="36848328.jpg" alt="Tulipános Porta – szoba részlet" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848329.jpg" alt="Dinnyési szállás – kert virágokkal" loading="lazy">
+                <picture>
+                    <source srcset="36848329.webp" type="image/webp">
+                    <img src="36848329.jpg" alt="Dinnyési szállás – kert virágokkal" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848330.jpg" alt="Tulipános Porta – esti hangulat" loading="lazy">
+                <picture>
+                    <source srcset="36848330.webp" type="image/webp">
+                    <img src="36848330.jpg" alt="Tulipános Porta – esti hangulat" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848331.jpg" alt="Vendégház – nappali belső" loading="lazy">
+                <picture>
+                    <source srcset="36848331.webp" type="image/webp">
+                    <img src="36848331.jpg" alt="Vendégház – nappali belső" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848332.jpg" alt="Tulipános Porta – konyhai részlet" loading="lazy">
+                <picture>
+                    <source srcset="36848332.webp" type="image/webp">
+                    <img src="36848332.jpg" alt="Tulipános Porta – konyhai részlet" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="36848336.jpg" alt="Dinnyés – Velencei-tó közelében" loading="lazy">
+                <picture>
+                    <source srcset="36848336.webp" type="image/webp">
+                    <img src="36848336.jpg" alt="Dinnyés – Velencei-tó közelében" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="9516573.jpeg" alt="Tulipános Porta – vendégház homlokzat" loading="lazy">
+                <picture>
+                    <source srcset="9516573.webp" type="image/webp">
+                    <img src="9516573.jpeg" alt="Tulipános Porta – vendégház homlokzat" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="9516574.jpeg" alt="Vendégház kert – természetes környezet" loading="lazy">
+                <picture>
+                    <source srcset="9516574.webp" type="image/webp">
+                    <img src="9516574.jpeg" alt="Vendégház kert – természetes környezet" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="9516575.jpeg" alt="Tulipános Porta – hagyományos dekoráció" loading="lazy">
+                <picture>
+                    <source srcset="9516575.webp" type="image/webp">
+                    <img src="9516575.jpeg" alt="Tulipános Porta – hagyományos dekoráció" loading="lazy">
+                </picture>
             </div>
             <div class="gallery-item">
-                <img src="9516576.jpeg" alt="Dinnyési vendégház – falusi idill" loading="lazy">
+                <picture>
+                    <source srcset="9516576.webp" type="image/webp">
+                    <img src="9516576.jpeg" alt="Dinnyési vendégház – falusi idill" loading="lazy">
+                </picture>
             </div>
         </div>
     </section>
