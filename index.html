@@ -703,7 +703,7 @@
 
     <section id="contact-us">
         <h2 class="section-title" id="title-contact-us">Írjon nekünk</h2>
-        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" action="https://formspree.io/f/xykpknky" method="POST">
+        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
             <input type="hidden" name="form-name" value="contact">
             <p class="hidden" aria-hidden="true"><label>Ha ember vagy, hagyd üresen: <input name="bot-field"></label></p>
             <div class="form-row">
@@ -994,31 +994,48 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
 
         var form = document.getElementById("contact-form");
         setLang('hu')
-  
+
+        function encode(data) {
+            return Object.keys(data)
+                .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+                .join('&');
+        }
+
         async function handleSubmit(event) {
             event.preventDefault();
-            var data = new FormData(event.target);
-            fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
+            const statusEl = document.getElementById("contact-form-status");
+            const lang = document.documentElement.lang;
+            const btn = document.getElementById("contact-us-submit");
+
+            // Collect all named form fields
+            const formData = new FormData(event.target);
+            const body = {};
+            formData.forEach((value, key) => { body[key] = value; });
+            // Netlify requires 'form-name' in the body
+            body['form-name'] = 'contact';
+
+            btn.disabled = true;
+            statusEl.style.color = '';
+            statusEl.innerHTML = '';
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: encode(body)
             }).then(response => {
-            if (response.ok) {
-                form.reset()
-                document.getElementById("contact-form-status").innerHTML = translations[document.documentElement.lang].contactUsThankYou;
-            } else {
-                response.json().then(data => {
-                if (Object.hasOwn(data, 'errors')) {
-                    document.getElementById("contact-form-status").innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                if (response.ok) {
+                    form.reset();
+                    statusEl.style.color = 'green';
+                    statusEl.innerHTML = translations[lang].contactUsThankYou;
                 } else {
-                    document.getElementById("contact-form-status").innerHTML = translations[document.documentElement.lang].contactUsError;
+                    statusEl.style.color = 'red';
+                    statusEl.innerHTML = translations[lang].contactUsError;
                 }
-                })
-            }
-            }).catch(error => {
-            document.getElementById("contact-form-status").innerHTML = translations[document.documentElement.lang].contactUsError;
+            }).catch(() => {
+                statusEl.style.color = 'red';
+                statusEl.innerHTML = translations[lang].contactUsError;
+            }).finally(() => {
+                btn.disabled = false;
             });
         }
         form.addEventListener("submit", handleSubmit)
