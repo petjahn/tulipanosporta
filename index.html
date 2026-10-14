@@ -1495,11 +1495,33 @@
             margin: 0 auto 3.5rem auto;
         }
 
-        .footer-brand img {
-            height: 65px;
+        .footer-logo-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            padding: 8px 14px;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
             margin-bottom: 1.25rem;
-            filter: brightness(0) invert(1);
-            opacity: 0.9;
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .footer-logo-badge:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+        }
+
+        .footer-logo-badge picture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo-badge img {
+            height: 56px;
+            width: auto;
+            display: block;
         }
 
         .footer-brand p {
