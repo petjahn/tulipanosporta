@@ -3,9 +3,8 @@
    ========================================================================== */
 
 .booking-section {
-    padding: 5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    position: relative;
+    background-color: var(--bg-color, #FAF8F5);
 }
 
 .booking-container {

@@ -7,8 +7,10 @@
 
     <!-- ===== Primary SEO ===== -->
     <title>Tulipános Porta és Vendégház – Szállás Dinnyésen, Velencei-tó mellett</title>
-    <meta name="description" content="Hagyományos magyar falusi vendégház Dinnyésen, a Velencei-tó partján. Egész évben foglalható, 4 fő részére, gyermekbarát kerttel, kerti káddal. Foglaljon online!">
-    <meta name="keywords" content="vendégház Dinnyés, szállás Velencei-tó, Tulipános Porta, falusi turizmus, gyermekbarát szállás, Gárdony, nyaralás Dinnyés">
+    <meta name="description"
+        content="Hagyományos magyar falusi vendégház Dinnyésen, a Velencei-tó partján. Egész évben foglalható, 4 fő részére, gyermekbarát kerttel, kerti káddal. Foglaljon online!">
+    <meta name="keywords"
+        content="vendégház Dinnyés, szállás Velencei-tó, Tulipános Porta, falusi turizmus, gyermekbarát szállás, Gárdony, nyaralás Dinnyés">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tulipanosporta.hu/">
     <link rel="icon" href="logo.png">
@@ -16,7 +18,8 @@
     <!-- ===== Open Graph (Facebook, WhatsApp, etc.) ===== -->
     <meta property="og:type" content="business.business">
     <meta property="og:title" content="Tulipános Porta és Vendégház – Dinnyés, Velencei-tó">
-    <meta property="og:description" content="Hagyományos magyar falusi vendégház Dinnyésen, a Velencei-tó partján. Egész évben foglalható, 4 fő részére, gyermekbarát kerttel és kerti káddal.">
+    <meta property="og:description"
+        content="Hagyományos magyar falusi vendégház Dinnyésen, a Velencei-tó partján. Egész évben foglalható, 4 fő részére, gyermekbarát kerttel és kerti káddal.">
     <meta property="og:url" content="https://tulipanosporta.hu/">
     <meta property="og:image" content="https://tulipanosporta.hu/36848324.jpg">
     <meta property="og:image:width" content="1200">
@@ -29,7 +32,8 @@
     <!-- ===== Twitter / X Card ===== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tulipános Porta és Vendégház – Dinnyés">
-    <meta name="twitter:description" content="Hagyományos falusi vendégház Dinnyésen, a Velencei-tó mellett. Egész évben nyitva.">
+    <meta name="twitter:description"
+        content="Hagyományos falusi vendégház Dinnyésen, a Velencei-tó mellett. Egész évben nyitva.">
     <meta name="twitter:image" content="https://tulipanosporta.hu/36848324.jpg">
 
     <!-- ===== Structured Data: LodgingBusiness ===== -->
@@ -66,7 +70,7 @@
       "currenciesAccepted": "HUF",
       "paymentAccepted": "Átutalás, készpénz",
       "checkinTime": "14:00",
-      "checkoutTime": "11:00",
+      "checkoutTime": "10:00",
       "numberOfRooms": 1,
       "amenityFeature": [
         { "@type": "LocationFeatureSpecification", "name": "Gyermekbarát kert", "value": true },
@@ -85,28 +89,66 @@
     }
     </script>
 
-    <!-- ===== Performance: font preconnect & LCP preload ===== -->
+    <!-- ===== Performance & Typography ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="36848331.webp" type="image/webp" fetchpriority="high">
     <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="calendar.css">
 
     <style>
+        /* ==========================================================================
+           Design System & Tokens - Tulipános Porta
+           ========================================================================== */
         :root {
-            --primary-green: #4A6B2F;
-            /* Matches logo green */
-            --accent-red: #D32F2F;
-            /* Matches the red decor */
-            --bg-color: #FDFBF7;
-            /* Warm off-white */
-            --text-color: #333;
-            --light-gray: #f4f4f4;
+            /* Brand Colors */
+            --primary-green: #375423;
+            --primary-green-dark: #273D17;
+            --primary-green-light: #4A6B2F;
+            --primary-surface: #F2F6ED;
+            --primary-subtle: #E8EFE2;
+
+            --accent-red: #C53030;
+            --accent-red-hover: #A82424;
+            --accent-red-subtle: #FDF2F0;
+
+            --accent-gold: #C99738;
+            --accent-gold-subtle: #FCF7ED;
+
+            /* Neutral Colors */
+            --bg-color: #FAF8F5;
+            --card-bg: #FFFFFF;
+            --text-color: #272B23;
+            --text-muted: #5F6657;
+            --text-light: #7E8576;
+            --border-color: #E6EAE0;
+            --border-subtle: #F0F3EC;
+
+            /* Shadows */
+            --shadow-xs: 0 1px 3px rgba(35, 45, 25, 0.04);
+            --shadow-sm: 0 2px 8px rgba(35, 45, 25, 0.05);
+            --shadow-md: 0 8px 24px rgba(35, 45, 25, 0.08);
+            --shadow-lg: 0 16px 40px rgba(35, 45, 25, 0.11);
+            --shadow-hover: 0 20px 45px rgba(35, 45, 25, 0.14);
+
+            /* Radius */
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --radius-pill: 9999px;
+
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-smooth: 0.35s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        * {
+        /* --- Base Reset & Typography --- */
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -114,429 +156,1563 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 85px;
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.65;
+            font-size: 1rem;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         h1,
         h2,
-        h3 {
-            font-family: 'Merriweather', serif;
-            color: var(--primary-green);
+        h3,
+        h4 {
+            font-family: 'Playfair Display', 'Merriweather', serif;
+            color: var(--primary-green-dark);
+            line-height: 1.25;
+            letter-spacing: -0.01em;
         }
 
-        /* --- Navigation --- */
-        nav {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        p {
+            color: var(--text-muted);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- Global Layout Containers --- */
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 6rem 1.5rem;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-red);
+            background: var(--accent-red-subtle);
+            padding: 6px 14px;
+            border-radius: var(--radius-pill);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            margin-bottom: 1rem;
+            color: var(--primary-green-dark);
+        }
+
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-red);
+            border-radius: var(--radius-pill);
+            margin: 1rem auto 0 auto;
+        }
+
+        /* --- Navigation Bar --- */
+        nav.site-nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 0.8rem 2rem;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all var(--transition-fast);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        .nav-inner {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .logo-container a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
         .logo-container img {
-            height: 65px;
+            height: 60px;
             width: auto;
+            transition: transform var(--transition-fast);
+        }
+
+        .logo-container:hover img {
+            transform: scale(1.03);
         }
 
         .nav-links {
             display: flex;
-            gap: 25px;
+            align-items: center;
+            gap: 28px;
         }
 
         .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
+            font-size: 0.92rem;
             font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s;
+            color: var(--text-color);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-red);
+            transition: width var(--transition-fast);
+            border-radius: 2px;
         }
 
         .nav-links a:hover {
             color: var(--accent-red);
         }
 
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-nav-book {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-green);
+            color: #ffffff;
+            font-size: 0.88rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: var(--radius-pill);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            transition: all var(--transition-fast);
+            box-shadow: 0 4px 12px rgba(55, 84, 35, 0.2);
+        }
+
+        .btn-nav-book:hover {
+            background: var(--primary-green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(55, 84, 35, 0.3);
+            color: #ffffff;
+        }
+
+        /* Language Switcher */
+        .lang-switch {
+            display: flex;
+            background: var(--primary-surface);
+            padding: 3px;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--border-color);
+        }
+
         .lang-switch button {
             background: none;
-            border: 1px solid #ddd;
+            border: none;
             cursor: pointer;
-            padding: 6px 10px;
-            margin-left: 5px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.3s;
+            padding: 5px 11px;
+            border-radius: var(--radius-pill);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            transition: all var(--transition-fast);
         }
 
         .lang-switch button:hover {
-            border-color: var(--primary-green);
             color: var(--primary-green);
         }
 
         .lang-switch button.active {
             background-color: var(--primary-green);
-            color: white;
-            border-color: var(--primary-green);
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(55, 84, 35, 0.2);
+        }
+
+        /* Mobile Hamburger Toggle */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            color: var(--primary-green);
+        }
+
+        .mobile-menu-btn svg {
+            width: 28px;
+            height: 28px;
+            stroke-width: 2.2;
         }
 
         /* --- Hero Section --- */
         header.hero {
-            /* Using the garden image with the sandbox as the hero */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('36848331.jpg');
-            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('36848331.webp');
-            background-size: cover;
-            background-position: center;
-            height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-
-        header.hero h1 {
-            color: white;
-            font-size: 3.5rem;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        header.hero p {
-            font-size: 1.6rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-            max-width: 700px;
-        }
-
-        /* --- Content Sections --- */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3.5rem;
             position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-red);
-            margin: 15px auto 0;
-        }
-
-        /* --- About --- */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            min-height: 88dvh;
+            display: flex;
             align-items: center;
+            justify-content: center;
+            background-image:
+                linear-gradient(180deg, rgba(22, 36, 15, 0.45) 0%, rgba(15, 25, 10, 0.70) 100%),
+                url('36848331.webp');
+            background-image:
+                linear-gradient(180deg, rgba(22, 36, 15, 0.45) 0%, rgba(15, 25, 10, 0.70) 100%),
+                url('36848331.jpg');
+            background-size: cover;
+            background-position: center 60%;
+            color: #ffffff;
+            text-align: center;
+            padding: 5rem 1.5rem 6.5rem 1.5rem;
         }
 
-        .about-text {
-            font-size: 1.15rem;
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 0.9s ease-out;
         }
 
-        .about-text p {
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            padding: 8px 18px;
+            border-radius: var(--radius-pill);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             margin-bottom: 1.5rem;
         }
 
-        .features-list {
-            margin-top: 30px;
-            list-style: none;
+        .hero h1 {
+            color: #ffffff;
+            font-size: clamp(2.4rem, 5vw + 1rem, 4.2rem);
+            font-weight: 700;
+            line-height: 1.18;
+            margin-bottom: 1.25rem;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
         }
 
-        .features-list li {
-            margin-bottom: 15px;
+        .hero p.hero-subtitle {
+            font-size: clamp(1.15rem, 2vw, 1.45rem);
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 400;
+            max-width: 740px;
+            margin: 0 auto 2.5rem auto;
+            line-height: 1.6;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-actions {
             display: flex;
             align-items: center;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent-red);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 15px 32px;
+            border-radius: var(--radius-pill);
+            box-shadow: 0 6px 22px rgba(197, 48, 48, 0.35);
+            transition: all var(--transition-fast);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-red-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(197, 48, 48, 0.45);
+            color: #ffffff;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            color: #ffffff;
             font-weight: 600;
+            font-size: 1.05rem;
+            padding: 15px 30px;
+            border-radius: var(--radius-pill);
+            transition: all var(--transition-fast);
         }
 
-        .features-list li::before {
-            content: '🌷';
-            margin-right: 12px;
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.32);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        /* Hero Quick Trust Strip */
+        .hero-trust-strip {
+            position: absolute;
+            bottom: -36px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(1140px, calc(100% - 3rem));
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 1.25rem 2rem;
+            z-index: 10;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 0.5rem 1rem;
+        }
+
+        .trust-item:not(:last-child) {
+            border-right: 1px solid var(--border-color);
+        }
+
+        .trust-icon {
+            font-size: 1.8rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .trust-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary-green-dark);
+            margin-bottom: 2px;
+        }
+
+        .trust-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        /* --- About Section --- */
+        #about {
+            padding-top: 8rem;
+            background: linear-gradient(180deg, var(--bg-color) 0%, #ffffff 100%);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2rem, 3.2vw, 2.6rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-lead {
             font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
         }
 
-        .about-img picture,
-        .about-img img {
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: var(--primary-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: all var(--transition-fast);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            background: #ffffff;
+            box-shadow: var(--shadow-sm);
+            border-color: var(--primary-green-light);
+        }
+
+        .feature-card-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .feature-card-text {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary-green-dark);
+            line-height: 1.35;
+        }
+
+        .about-img-container {
+            position: relative;
+        }
+
+        .about-img-wrapper {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 6px solid #ffffff;
+            aspect-ratio: 4 / 3.4;
+        }
+
+        .about-img-wrapper img {
             width: 100%;
-            display: block;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
         }
 
-        .about-img img {
-            border-radius: 12px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        .about-img-wrapper:hover img {
+            transform: scale(1.04);
         }
 
-        /* --- Gallery (FIXED) --- */
+        .about-floating-badge {
+            position: absolute;
+            bottom: -22px;
+            left: 24px;
+            background: #ffffff;
+            padding: 16px 22px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .badge-stars {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .badge-text-bold {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary-green-dark);
+        }
+
+        .badge-text-sub {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* --- Gallery Section --- */
+        #gallery {
+            background-color: #FAF8F5;
+        }
+
+        .gallery-filter-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .gallery-filter-btn {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 9px 20px;
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .gallery-filter-btn:hover {
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+        }
+
+        .gallery-filter-btn.active {
+            background: var(--primary-green);
+            border-color: var(--primary-green);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(55, 84, 35, 0.2);
+        }
+
         .gallery-grid {
             display: grid;
-            /* Creates a responsive grid where items are at least 280px wide */
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 22px;
         }
 
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            /* Forces a nice rectangular aspect ratio for uniformity */
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
             aspect-ratio: 4 / 3;
-            background: #f0f0f0;
-            /*Placeholder color while loading*/
+            background: #eef1ea;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
         }
 
-        .gallery-item picture {
-            display: block;
-            width: 100%;
-            height: 100%;
+        .gallery-item.hidden-by-filter {
+            display: none !important;
         }
 
+        .gallery-item.initially-hidden {
+            display: none;
+        }
+
+        .gallery-item picture,
         .gallery-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            /* Neatly crops image to fill the box */
-            transition: transform 0.5s ease;
-            /* Smooth zoom */
             display: block;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-4px);
         }
 
         .gallery-item:hover img {
-            transform: scale(1.08);
-            /* Subtle zoom effect on hover */
+            transform: scale(1.07);
         }
 
-        /* --- Activities --- */
-        .activities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-        }
-
-        .activity-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border-top: 5px solid var(--primary-green);
-            transition: transform 0.3s;
-        }
-
-        .activity-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .activity-card h3 {
-            margin-bottom: 15px;
-            color: var(--text-color);
-            font-size: 1.4rem;
-        }
-
-        /* --- Contact --- */
-        .contact-container {
-            background-color: white;
-            padding: 4rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Reviews cards */
-        .reviews-grid {
+        .gallery-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(20, 35, 12, 0.75) 100%);
             display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
-            margin-top: 20px;
+            align-items: flex-end;
+            padding: 16px;
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+            color: #ffffff;
         }
 
-        @media (min-width: 700px) {
-            .reviews-grid {
-                flex-direction: row;
-                justify-content: center;
-            }
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
         }
 
-        .review-card {
-            background: white;
-            padding: 18px;
-            border-radius: 10px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-            max-width: 360px;
-            text-align: left;
-        }
-
-        .review-text {
-            font-style: italic;
-            margin-bottom: 10px;
-            color: var(--text-color);
-        }
-
-        .review-meta {
+        .gallery-caption {
             font-size: 0.9rem;
-            color: #666;
+            font-weight: 600;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
             display: flex;
-            justify-content: space-between;
             align-items: center;
             gap: 8px;
         }
 
-        .contact-details p {
-            margin: 15px 0;
-            font-size: 1.3rem;
-        }
-
-        .contact-details strong {
-            color: var(--primary-green);
-        }
-
-        footer {
-            background-color: var(--primary-green);
-            color: white;
+        .gallery-expand-actions {
             text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-            font-weight: 600;
+            margin-top: 3rem;
         }
 
-        .hidden {
+        .btn-gallery-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 12px 28px;
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-gallery-toggle:hover {
+            background: var(--primary-green);
+            color: #ffffff;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* --- Lightbox Modal --- */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(12, 20, 9, 0.94);
+            backdrop-filter: blur(12px);
             display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
         }
 
-        /* --- Contact Us --- */
-        .contact-us-container {
-            background-color: white;
-            padding: 4rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
+        .lightbox-modal.active {
+            display: flex;
+            animation: fadeIn 0.25s ease;
         }
 
-        .contact-us-details p {
-            margin: 15px 0;
-            font-size: 1.3rem;
+        .lightbox-content {
+            position: relative;
+            max-width: 1100px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .contact-us-details strong {
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 75vh;
+            border-radius: var(--radius-md);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            object-fit: contain;
+        }
+
+        .lightbox-caption-bar {
+            color: #ffffff;
+            margin-top: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -46px;
+            right: 0;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 2.2rem;
+            cursor: pointer;
+            padding: 6px;
+            line-height: 1;
+            transition: color var(--transition-fast);
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-red);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .lightbox-nav:hover {
+            background: #ffffff;
             color: var(--primary-green);
         }
 
-        /* Contact form styles */
-        .contact-form {
-            margin: 2rem auto 1.5rem auto;
-            text-align: left;
-            max-width: 800px;
+        .lightbox-prev {
+            left: -70px;
+        }
+
+        .lightbox-next {
+            right: -70px;
+        }
+
+        /* --- Activities Section --- */
+        #activities {
+            background-color: #ffffff;
+        }
+
+        .activities-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .activity-card {
+            background: var(--bg-color);
+            border-radius: var(--radius-lg);
+            padding: 36px 30px;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-smooth);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-6px);
+            background: #ffffff;
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-green-light);
+        }
+
+        .activity-icon-pill {
+            width: 62px;
+            height: 62px;
+            border-radius: var(--radius-md);
+            background: var(--primary-surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .activity-tag {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .activity-card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green-dark);
+        }
+
+        .activity-card p {
+            font-size: 0.98rem;
+            line-height: 1.65;
+            color: var(--text-muted);
+            flex-grow: 1;
+        }
+
+        /* --- Prices Section --- */
+        #prices {
+            background-color: var(--bg-color);
+        }
+
+        .pricing-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            align-items: stretch;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-card {
+            background: #ffffff;
+            border-radius: var(--radius-xl);
+            padding: 38px 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all var(--transition-smooth);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary-green);
+            box-shadow: var(--shadow-md);
+            background: linear-gradient(180deg, #FAFDF7 0%, #ffffff 100%);
+        }
+
+        .pricing-featured-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-green);
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 18px;
+            border-radius: var(--radius-pill);
+            box-shadow: 0 4px 12px rgba(55, 84, 35, 0.25);
+        }
+
+        .pricing-card-header {
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.75rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .pricing-season-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary-green-dark);
+            margin-bottom: 6px;
+        }
+
+        .pricing-season-dates {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: var(--primary-surface);
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            margin-bottom: 1.25rem;
+        }
+
+        .pricing-amount-group {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .pricing-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-green-dark);
+            line-height: 1;
+        }
+
+        .pricing-unit {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .pricing-features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .pricing-features-list li {
+            font-size: 0.94rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .pricing-features-list li svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--primary-green);
+            flex-shrink: 0;
+        }
+
+        .btn-pricing-cta {
+            display: block;
+            text-align: center;
+            background: var(--primary-surface);
+            color: var(--primary-green-dark);
+            border: 1px solid var(--border-color);
+            padding: 12px 20px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all var(--transition-fast);
+        }
+
+        .pricing-card.featured .btn-pricing-cta {
+            background: var(--primary-green);
+            color: #ffffff;
+            border-color: var(--primary-green);
+        }
+
+        .btn-pricing-cta:hover {
+            background: var(--primary-green-dark);
+            color: #ffffff;
+            border-color: var(--primary-green-dark);
+            transform: translateY(-2px);
+        }
+
+        .pricing-notice-box {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 24px 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .notice-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .notice-text {
+            font-size: 0.96rem;
+            color: var(--text-color);
+            line-height: 1.55;
+        }
+
+        /* --- Reviews Section --- */
+        #reviews {
+            background: #ffffff;
+        }
+
+        .reviews-rating-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 3.5rem;
+        }
+
+        .rating-badge-pill {
+            background: var(--accent-gold-subtle);
+            border: 1px solid #fae7ba;
+            padding: 10px 22px;
+            border-radius: var(--radius-pill);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #8f600e;
+        }
+
+        .rating-stars {
+            color: var(--accent-gold);
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+            margin-bottom: 3rem;
+        }
+
+        .review-card {
+            background: var(--bg-color);
+            border-radius: var(--radius-xl);
+            padding: 32px 28px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all var(--transition-smooth);
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            background: #ffffff;
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-green-light);
+        }
+
+        .review-quote-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+            color: var(--primary-green-light);
+            opacity: 0.35;
+            margin-bottom: 12px;
+        }
+
+        .review-text {
+            font-style: italic;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .review-author-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--border-color);
+            padding-top: 14px;
+        }
+
+        .review-author-info {
+            display: flex;
+            align-items: center;
             gap: 12px;
         }
 
-        .contact-form label {
-            font-weight: 600;
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-surface);
+            color: var(--primary-green-dark);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .review-author {
+            font-weight: 700;
             font-size: 0.95rem;
-            margin-bottom: 4px;
-            color: var(--text-color);
+            color: var(--primary-green-dark);
         }
 
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            background: #fff;
-            resize: vertical;
+        .review-platform-badge {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1877F2;
+            background: #EBF3FF;
+            padding: 4px 10px;
+            border-radius: var(--radius-pill);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .contact-form .form-row {
+        .szallas-badge-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* --- Unified Contact & Inquiry Section --- */
+        #contact {
+            background-color: var(--bg-color);
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 48px;
+            align-items: flex-start;
+        }
+
+        .contact-info-panel {
+            background: #ffffff;
+            border-radius: var(--radius-xl);
+            padding: 40px 34px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .host-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1.75rem;
+        }
+
+        .host-icon-circle {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: var(--primary-surface);
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .host-details-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary-green-dark);
+        }
+
+        .host-role {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .contact-items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .contact-icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            background: var(--primary-surface);
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-item-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+
+        .contact-item-value {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary-green-dark);
+        }
+
+        .contact-item-value a:hover {
+            color: var(--accent-red);
+            text-decoration: underline;
+        }
+
+        .map-frame-wrapper {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Inquiry Form */
+        .contact-form-panel {
+            background: #ffffff;
+            border-radius: var(--radius-xl);
+            padding: 44px 38px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-form-panel h3 {
+            font-size: 1.7rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-green-dark);
+        }
+
+        .contact-form-panel p.form-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 18px;
+        }
+
+        .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 18px;
         }
 
-        .contact-form button {
-            background: var(--primary-green);
-            color: white;
-            border: none;
-            padding: 12px 18px;
-            border-radius: 8px;
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 0.88rem;
             font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 16px;
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 0.98rem;
+            font-family: inherit;
+            background: #FAF8F5;
+            color: var(--text-color);
+            transition: all var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(55, 84, 35, 0.12);
+        }
+
+        .btn-form-submit {
+            background: var(--primary-green);
+            color: #ffffff;
+            border: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 15px 32px;
+            border-radius: var(--radius-pill);
             cursor: pointer;
+            transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 14px rgba(55, 84, 35, 0.25);
             width: fit-content;
         }
 
-        .form-feedback { 
-            font-size: 0.95rem; 
-            margin-top: 6px; 
+        .btn-form-submit:hover:not(:disabled) {
+            background: var(--primary-green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(55, 84, 35, 0.35);
         }
 
-        /* Mobile Responsive */
-        @media (max-width: 900px) {
-            nav {
-                flex-direction: column;
-                padding: 1rem;
+        .btn-form-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-feedback {
+            font-size: 0.96rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* --- Site Footer --- */
+        footer.site-footer {
+            background: var(--primary-green-dark);
+            color: #ffffff;
+            padding: 5rem 1.5rem 2.5rem 1.5rem;
+            border-top: 4px solid var(--primary-green);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 48px;
+            max-width: 1240px;
+            margin: 0 auto 3.5rem auto;
+        }
+
+        .footer-brand img {
+            height: 65px;
+            margin-bottom: 1.25rem;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            max-width: 360px;
+        }
+
+        .footer-col h4 {
+            color: #ffffff;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 36px;
+            height: 2px;
+            background: var(--accent-red);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.94rem;
+            transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            transform: translateX(4px);
+        }
+
+        .footer-contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 0.94rem;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .footer-contact-items a {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            max-width: 1240px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.6);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-back-to-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            cursor: pointer;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-back-to-top:hover {
+            color: #ffffff;
+        }
+
+        /* --- Utilities --- */
+        .hidden {
+            display: none !important;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
             }
 
-            .nav-links {
-                margin: 15px 0;
-                flex-wrap: wrap;
-                justify-content: center;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Responsive Breakpoints --- */
+        @media (max-width: 1050px) {
+            .hero-trust-strip {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                position: static;
+                transform: none;
+                margin: 2rem auto -2rem auto;
             }
 
-            header.hero {
-                height: 70vh;
+            .trust-item:nth-child(2) {
+                border-right: none;
             }
 
-            header.hero h1 {
-                font-size: 2.5rem;
+            #about {
+                padding-top: 5rem;
             }
 
-            header.hero p {
-                font-size: 1.2rem;
+            .pricing-cards-grid {
+                grid-template-columns: 1fr;
+                max-width: 540px;
+                margin-left: auto;
+                margin-right: auto;
             }
 
-            .about-grid {
+            .contact-layout {
                 grid-template-columns: 1fr;
             }
 
-            .about-img {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-img-container {
                 order: -1;
-                /* Put image above text on mobile */
             }
 
-            .section-title {
-                font-size: 2rem;
+            .features-grid {
+                grid-template-columns: 1fr;
             }
 
-            .contact-container {
-                padding: 2rem;
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 820px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                box-shadow: var(--shadow-lg);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem 2rem;
+                gap: 16px;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .nav-links.mobile-open {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .btn-nav-book {
+                display: none;
+            }
+
+            .hero {
+                min-height: 80dvh;
+                padding-top: 4rem;
+            }
+
+            .hero-trust-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-item {
+                border-right: none !important;
+                border-bottom: 1px solid var(--border-color);
+                padding-bottom: 0.75rem;
+            }
+
+            .trust-item:last-child {
+                border-bottom: none;
+            }
+
+            .lightbox-nav {
+                display: none;
             }
         }
     </style>
@@ -544,429 +1720,1120 @@
 
 <body>
 
-    <nav>
-        <div class="logo-container">
-            <picture>
-                <source srcset="logo.webp" type="image/webp">
-                <img src="logo.png" alt="Tulipános Porta Logo" width="65" height="65">
-            </picture>
-        </div>
-        <div class="nav-links">
-            <a href="#about" id="nav-about">Rólunk</a>
-            <a href="#gallery" id="nav-gallery">Galéria</a>
-            <a href="#prices" id="nav-prices">Árak</a>
-            <a href="#booking" id="nav-booking">Foglaltság</a>
-            <a href="#activities" id="nav-activities">Programok</a>
-            <a href="#contact" id="nav-contact">Kapcsolat</a>
-            <a href="#contact-us" id="nav-contact-us">Írjon nekünk</a>
-        </div>
-        <div class="lang-switch">
-            <button onclick="setLang('hu')" class="active" id="btn-hu">HU</button>
-            <button onclick="setLang('en')" id="btn-en">EN</button>
-            <button onclick="setLang('de')" id="btn-de">DE</button>
+    <!-- ===== Navigation Bar ===== -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <div class="logo-container">
+                <a href="#" aria-label="Tulipános Porta Kezdőlap">
+                    <picture>
+                        <source srcset="logo.webp" type="image/webp">
+                        <img src="logo.png" alt="Tulipános Porta Logo" width="65" height="65">
+                    </picture>
+                </a>
+            </div>
+
+            <div class="nav-links" id="site-nav-links">
+                <a href="#about" id="nav-about">Rólunk</a>
+                <a href="#gallery" id="nav-gallery">Galéria</a>
+                <a href="#prices" id="nav-prices">Árak</a>
+                <a href="#booking" id="nav-booking">Foglaltság</a>
+                <a href="#activities" id="nav-activities">Programok</a>
+                <a href="#reviews" id="nav-reviews">Vélemények</a>
+                <a href="#contact" id="nav-contact">Kapcsolat</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#booking" class="btn-nav-book" id="nav-cta-btn">
+                    <span>📅</span>
+                    <span id="nav-cta-text">Foglalás</span>
+                </a>
+
+                <div class="lang-switch" role="group" aria-label="Nyelvválasztás">
+                    <button onclick="setLang('hu')" class="active" id="btn-hu" aria-label="Magyar">HU</button>
+                    <button onclick="setLang('en')" id="btn-en" aria-label="English">EN</button>
+                    <button onclick="setLang('de')" id="btn-de" aria-label="Deutsch">DE</button>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
 
+    <!-- ===== Hero Section ===== -->
     <header class="hero">
-        <h1 id="hero-title">Hagyomány és Kényelem a Velencei-tónál</h1>
-        <p id="hero-subtitle">Pihenés Dinnyés szívében, falusi hangulatban.</p>
+        <div class="hero-content">
+            <div class="hero-pill">
+                <span>🌷</span>
+                <span id="hero-badge">Falusi vendégház • Dinnyés, Velencei-tó</span>
+            </div>
+            <h1 id="hero-title">Hagyomány és Kényelem a Velencei-tónál</h1>
+            <p class="hero-subtitle" id="hero-subtitle">Pihenés Dinnyés szívében, falusi hangulatban – tágas kerttel,
+                kerti káddal és meghitt kényelemmel az egész családnak.</p>
+
+            <div class="hero-actions">
+                <a href="#booking" class="btn-primary" id="hero-btn-book">
+                    <span>📅</span>
+                    <span id="hero-btn-book-text">Foglaltság ellenőrzése</span>
+                </a>
+                <a href="#gallery" class="btn-secondary" id="hero-btn-gallery">
+                    <span>📷</span>
+                    <span id="hero-btn-gallery-text">Képgaléria megtekintése</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Trust Badges Bar -->
+        <div class="hero-trust-strip">
+            <div class="trust-item">
+                <div class="trust-icon">🏡</div>
+                <div>
+                    <div class="trust-title" id="trust-1-title">4 Fős Vendégház</div>
+                    <div class="trust-desc" id="trust-1-desc">Egész ház privát használattal</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🌿</div>
+                <div>
+                    <div class="trust-title" id="trust-2-title">Gyermekbarát Kert</div>
+                    <div class="trust-desc" id="trust-2-desc">Homokozó & játékok</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🛁</div>
+                <div>
+                    <div class="trust-title" id="trust-3-title">Kerti Kád</div>
+                    <div class="trust-desc" id="trust-3-desc">Napkollektoros fűtéssel</div>
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🚲</div>
+                <div>
+                    <div class="trust-title" id="trust-4-title">Velencei-tó Közelében</div>
+                    <div class="trust-desc" id="trust-4-desc">Kerékpárút & Várpark mellett</div>
+                </div>
+            </div>
+        </div>
     </header>
 
+    <!-- ===== About Section ===== -->
     <section id="about">
-        <h2 class="section-title" id="title-about">A Vendégházról</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p id="about-desc">
-                    Sok szeretettel várjuk vendégeinket a Tulipános Portán, Dinnyés csendes utcájában.
-                    Vendégházunk egész évben nyitva tart, ötvözve a hagyományos magyar falusi építészet báját a modern
-                    kényelemmel.
-                    A ház egy szobával rendelkezik, amely legfeljebb 4 fő számára biztosít kényelmes pihenést.
-                </p>
-                <ul class="features-list">
-                    <li id="feat-1">Teljesen gyermekbarát környezet</li>
-                    <li id="feat-2">Tágas kert homokozóval és játékokkal</li>
-                    <li id="feat-3">Kerti kád (napkollektoros fűtéssel, napos időben)</li>
-                    <li id="feat-4">Jól felszerelt konyha és étkező</li>
-                    <li id="feat-5">Egész évben foglalható</li>
-                </ul>
-            </div>
-            <div class="about-img">
-                <picture>
-                    <source srcset="36848324.webp" type="image/webp">
-                    <img src="36848324.jpg" alt="Tulipános Porta konyha" loading="lazy">
-                </picture>
-            </div>
-        </div>
-    </section>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-eyebrow" id="eyebrow-about">🌷 BEMUTATKOZÁS</span>
+                    <h2 id="title-about">A Vendégházról</h2>
+                    <p class="about-lead" id="about-desc">
+                        Sok szeretettel várjuk vendégeinket a Tulipános Portán, Dinnyés csendes utcájában.
+                        Vendégházunk egész évben nyitva tart, ötvözve a hagyományos magyar falusi építészet báját a
+                        modern
+                        kényelemmel. A ház egy szobával rendelkezik, amely legfeljebb 4 fő számára biztosít kényelmes
+                        pihenést.
+                    </p>
 
-    <section id="gallery">
-        <h2 class="section-title" id="title-gallery">Galéria</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="3148276.webp" type="image/webp">
-                    <img src="3148276.jpeg" alt="Tulipános Porta vendégház – kültéri nézet" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="3148278.webp" type="image/webp">
-                    <img src="3148278.jpeg" alt="Tulipános Porta – hagyományos falusi ház" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="3200916.webp" type="image/webp">
-                    <img src="3200916.jpeg" alt="Tulipános Porta – kert és udvar" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848317.webp" type="image/webp">
-                    <img src="36848317.jpg" alt="Vendégház szoba – belső kialakítás" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848318.webp" type="image/webp">
-                    <img src="36848318.jpg" alt="Tulipános Porta – hálószoba" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848319.webp" type="image/webp">
-                    <img src="36848319.jpg" alt="Vendégház konyha – felszerelt konyha" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848320.webp" type="image/webp">
-                    <img src="36848320.jpg" alt="Tulipános Porta – nappali és pihenő" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848321.webp" type="image/webp">
-                    <img src="36848321.jpg" alt="Vendégház – fürdőszoba" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848322.webp" type="image/webp">
-                    <img src="36848322.jpg" alt="Tulipános Porta – kerti kád" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848323.webp" type="image/webp">
-                    <img src="36848323.jpg" alt="Vendégház kert – homokozó és játszótér" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848324.webp" type="image/webp">
-                    <img src="36848324.jpg" alt="Tulipános Porta – tágas kert" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848325.webp" type="image/webp">
-                    <img src="36848325.jpg" alt="Dinnyési vendégház – napsugaras terasz" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848326.webp" type="image/webp">
-                    <img src="36848326.jpg" alt="Tulipános Porta – hagyományos tárgyak" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848327.webp" type="image/webp">
-                    <img src="36848327.jpg" alt="Vendégház – falusi hangulat" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848328.webp" type="image/webp">
-                    <img src="36848328.jpg" alt="Tulipános Porta – szoba részlet" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848329.webp" type="image/webp">
-                    <img src="36848329.jpg" alt="Dinnyési szállás – kert virágokkal" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848330.webp" type="image/webp">
-                    <img src="36848330.jpg" alt="Tulipános Porta – esti hangulat" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848331.webp" type="image/webp">
-                    <img src="36848331.jpg" alt="Vendégház – nappali belső" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848332.webp" type="image/webp">
-                    <img src="36848332.jpg" alt="Tulipános Porta – konyhai részlet" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="36848336.webp" type="image/webp">
-                    <img src="36848336.jpg" alt="Dinnyés – Velencei-tó közelében" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="9516573.webp" type="image/webp">
-                    <img src="9516573.jpeg" alt="Tulipános Porta – vendégház homlokzat" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="9516574.webp" type="image/webp">
-                    <img src="9516574.jpeg" alt="Vendégház kert – természetes környezet" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="9516575.webp" type="image/webp">
-                    <img src="9516575.jpeg" alt="Tulipános Porta – hagyományos dekoráció" loading="lazy">
-                </picture>
-            </div>
-            <div class="gallery-item">
-                <picture>
-                    <source srcset="9516576.webp" type="image/webp">
-                    <img src="9516576.jpeg" alt="Dinnyési vendégház – falusi idill" loading="lazy">
-                </picture>
-            </div>
-        </div>
-    </section>
-
-    <section id="activities">
-        <h2 class="section-title" id="title-activities">Környékbeli Programok</h2>
-        <p style="text-align: center; margin-bottom: 40px; font-size: 1.2rem;" id="activities-intro">Dinnyés és a
-            Velencei-tó rengeteg élményt kínál minden évszakban.</p>
-
-        <div class="activities-grid">
-            <div class="activity-card">
-                <h3 id="act-1-title">Madárdal Tanösvény</h3>
-                <p id="act-1-desc">Fedezze fel a Dinnyési-fertő gazdag élővilágát egy kellemes túra keretében. Tökéletes
-                    program természetkedvelőknek és családoknak.</p>
-            </div>
-            <div class="activity-card">
-                <h3 id="act-2-title">Kerékpározás a tó körül</h3>
-                <p id="act-2-desc">A Velencei-tó körüli kerékpárút kiváló minőségű és nagyrészt sík terep, így
-                    gyerekekkel is könnyen teljesíthető a tókerülés.</p>
-            </div>
-            <div class="activity-card">
-                <h3 id="act-3-title">Dinnyési Várpark</h3>
-                <p id="act-3-desc">Egyedülálló szabadtéri kiállítás a közelben, amely a történelmi Magyarország várait
-                    mutatja be kőből és fából készült makettek formájában.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="prices">
-        <h2 class="section-title" id="title-prices">Árak</h2>
-        <div class="contact-container">
-            <ul style="list-style: none; padding: 0; font-size: 1.15rem; text-align: left;">
-                <li id="price-line-1">Előszezon: 01.01-04.15: 34.000 Ft / nap</li>
-                <li id="price-line-2">Főszezon:  04.16-10.15: 40.000 Ft / nap</li>
-                <li id="price-line-3">Utószezon: 10.15-12.31: 34.000 Ft / nap</li>
-            </ul>
-            <p id="price-note" style="margin-top:12px;">Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/nap 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak.</p>
-        </div>
-    </section>
-
-    <section id="booking" class="booking-section">
-        <h2 class="section-title" id="title-booking">Foglaltsági Naptár</h2>
-        <p style="text-align: center; margin-bottom: 30px; font-size: 1.15rem; color: #555;" id="booking-subtitle">
-            Tekintse meg szabad időpontjainkat, vagy válassza ki a tervezett érkezés és távozás napját!
-        </p>
-
-        <div class="booking-container">
-            <div class="booking-header">
-                <div class="booking-title-group">
-                    <div id="calendar-sync-badge" class="calendar-sync-badge">
-                        <span class="dot"></span>
-                        <span class="badge-text">Google Naptár kapcsolat</span>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <span class="feature-card-icon">👨‍👩‍👧‍👦</span>
+                            <span class="feature-card-text" id="feat-1">Teljesen gyermekbarát környezet</span>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-card-icon">🌳</span>
+                            <span class="feature-card-text" id="feat-2">Tágas kert homokozóval és játékokkal</span>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-card-icon">🛁</span>
+                            <span class="feature-card-text" id="feat-3">Kerti kád (napkollektoros fűtéssel)</span>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-card-icon">🍳</span>
+                            <span class="feature-card-text" id="feat-4">Jól felszerelt konyha és étkező</span>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-card-icon">❄️</span>
+                            <span class="feature-card-text" id="feat-5">Egész évben foglalható, fűtött szállás</span>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-card-icon">🅿️</span>
+                            <span class="feature-card-text" id="feat-6">Ingyenes zárt parkolás az udvarban</span>
+                        </div>
                     </div>
                 </div>
-                <div class="calendar-controls">
-                    <button type="button" id="btn-prev-month" class="calendar-nav-btn" aria-label="Előző hónap">‹</button>
-                    <button type="button" id="btn-calendar-today" class="calendar-today-btn">Ma</button>
-                    <button type="button" id="btn-next-month" class="calendar-nav-btn" aria-label="Következő hónap">›</button>
-                </div>
-            </div>
 
-            <!-- 2-Month side by side grid -->
-            <div id="booking-calendar-wrapper" class="months-wrapper">
-                <!-- Dynamically rendered by calendar.js -->
-            </div>
+                <div class="about-img-container">
+                    <div class="about-img-wrapper">
+                        <picture>
+                            <source srcset="36848324.webp" type="image/webp">
+                            <img src="36848324.jpg" alt="Tulipános Porta konyha és kert" loading="lazy">
+                        </picture>
+                    </div>
 
-            <!-- Legend -->
-            <div class="calendar-legend">
-                <div class="legend-item">
-                    <span class="legend-box available"></span>
-                    <span id="legend-label-available">Szabad</span>
-                </div>
-                <div class="legend-item">
-                    <span class="legend-box booked"></span>
-                    <span id="legend-label-booked">Foglalt</span>
-                </div>
-                <div class="legend-item">
-                    <span class="legend-box arrival"></span>
-                    <span id="legend-label-arrival">Érkezési nap (délután)</span>
-                </div>
-                <div class="legend-item">
-                    <span class="legend-box leave"></span>
-                    <span id="legend-label-leave">Távozási nap (délelőtt)</span>
-                </div>
-                <div class="legend-item">
-                    <span class="legend-box selected"></span>
-                    <span id="legend-label-selected">Kiválasztva</span>
-                </div>
-            </div>
-
-            <!-- Interactive Booking Selection & Action Card -->
-            <div id="booking-action-card" class="booking-action-card">
-                <div id="calendar-booking-alert" class="booking-alert" role="alert"></div>
-                <div id="booking-selection-summary" class="booking-selection-info">
-                    <!-- Populated dynamically -->
-                </div>
-                <div class="selection-actions">
-                    <button type="button" id="btn-book-now" class="btn-book-now" disabled>
-                        <span style="font-size:1.1rem">📩</span>
-                        <span>Foglalási érdeklődés elküldése</span>
-                    </button>
-                    <button type="button" id="btn-clear-selection" class="btn-clear-selection" style="display: none;">
-                        Törlés
-                    </button>
+                    <div class="about-floating-badge">
+                        <div>
+                            <div class="badge-stars">★★★★★</div>
+                            <div class="badge-text-bold">Kiváló Minősítés</div>
+                            <div class="badge-text-sub">Szállás.hu & Facebook vendégek</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2 class="section-title" id="title-contact">Kapcsolat</h2>
-        <div class="contact-container">
-            <div class="contact-details">
-                <p id="contact-name"><strong>Házigazda:</strong> Dr. Belser Barbara</p>
-                <p><strong>Email:</strong> <a href="mailto:info@tulipanosporta.hu"
-                        style="color: var(--primary-green); text-decoration: none;">info@tulipanosporta.hu</a></p>
-                <p><strong>Telefon:</strong> <a href="tel:+36204858993"
-                        style="color: var(--primary-green); text-decoration: none;">+36 20 485 8993</a></p>
-                <p><strong>Cím:</strong> 2485 Gárdony, Dinnyés-Rákóczi utca 9.</p>
+    <!-- ===== Gallery Section ===== -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow" id="eyebrow-gallery">📷 PILLANATKÉPEK</span>
+                <h2 class="section-title" id="title-gallery">Galéria</h2>
+                <p class="section-subtitle" id="gallery-subtitle">Pillantson be a Tulipános Porta meghitt tereibe és
+                    zöldellő udvarába!</p>
+                <div class="section-divider"></div>
             </div>
-            <br>
-            <iframe
-                src="https://maps.google.com/maps?width=1900&height=400&hl=en&q=47.174241723682975%2C%2018.564711288723284&t=h&z=19&ie=UTF8&iwloc=B&output=embed"
-                width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!-- Category Filter Tabs -->
+            <div class="gallery-filter-bar">
+                <button type="button" class="gallery-filter-btn active" data-filter="all" id="filter-all">Összes kép
+                    (24)</button>
+                <button type="button" class="gallery-filter-btn" data-filter="haz" id="filter-haz">Vendégház &
+                    Szobák</button>
+                <button type="button" class="gallery-filter-btn" data-filter="kert" id="filter-kert">Kert & Kerti
+                    kád</button>
+                <button type="button" class="gallery-filter-btn" data-filter="reszlet" id="filter-reszlet">Hangulat &
+                    Részletek</button>
+            </div>
+
+            <div class="gallery-grid" id="main-gallery-grid">
+                <!-- 1 -->
+                <div class="gallery-item" data-category="haz" data-index="0"
+                    data-caption="Tulipános Porta vendégház – kültéri nézet">
+                    <picture>
+                        <source srcset="3148276.webp" type="image/webp">
+                        <img src="3148276.jpeg" alt="Tulipános Porta vendégház – kültéri nézet" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Kültéri nézet</div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="gallery-item" data-category="haz" data-index="1"
+                    data-caption="Tulipános Porta – hagyományos falusi ház">
+                    <picture>
+                        <source srcset="3148278.webp" type="image/webp">
+                        <img src="3148278.jpeg" alt="Tulipános Porta – hagyományos falusi ház" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Hagyományos falusi ház</div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="gallery-item" data-category="kert" data-index="2"
+                    data-caption="Tulipános Porta – kert és udvar">
+                    <picture>
+                        <source srcset="3200916.webp" type="image/webp">
+                        <img src="3200916.jpeg" alt="Tulipános Porta – kert és udvar" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Kert és udvar</div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="gallery-item" data-category="haz" data-index="3"
+                    data-caption="Vendégház szoba – belső kialakítás">
+                    <picture>
+                        <source srcset="36848317.webp" type="image/webp">
+                        <img src="36848317.jpg" alt="Vendégház szoba – belső kialakítás" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Szoba belső</div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="gallery-item" data-category="haz" data-index="4" data-caption="Tulipános Porta – hálószoba">
+                    <picture>
+                        <source srcset="36848318.webp" type="image/webp">
+                        <img src="36848318.jpg" alt="Tulipános Porta – hálószoba" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Hálószoba</div>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="gallery-item" data-category="haz" data-index="5"
+                    data-caption="Vendégház konyha – felszerelt konyha">
+                    <picture>
+                        <source srcset="36848319.webp" type="image/webp">
+                        <img src="36848319.jpg" alt="Vendégház konyha – felszerelt konyha" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Felszerelt konyha</div>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="gallery-item" data-category="haz" data-index="6"
+                    data-caption="Tulipános Porta – nappali és pihenő">
+                    <picture>
+                        <source srcset="36848320.webp" type="image/webp">
+                        <img src="36848320.jpg" alt="Tulipános Porta – nappali és pihenő" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Nappali és pihenő</div>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="gallery-item" data-category="haz" data-index="7" data-caption="Vendégház – fürdőszoba">
+                    <picture>
+                        <source srcset="36848321.webp" type="image/webp">
+                        <img src="36848321.jpg" alt="Vendégház – fürdőszoba" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Fürdőszoba</div>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="gallery-item" data-category="kert" data-index="8"
+                    data-caption="Tulipános Porta – kerti kád">
+                    <picture>
+                        <source srcset="36848322.webp" type="image/webp">
+                        <img src="36848322.jpg" alt="Tulipános Porta – kerti kád" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Kerti kád</div>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="gallery-item" data-category="kert" data-index="9"
+                    data-caption="Vendégház kert – homokozó és játszótér">
+                    <picture>
+                        <source srcset="36848323.webp" type="image/webp">
+                        <img src="36848323.jpg" alt="Vendégház kert – homokozó és játszótér" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Homokozó és játékok</div>
+                    </div>
+                </div>
+
+                <!-- 11 -->
+                <div class="gallery-item" data-category="kert" data-index="10"
+                    data-caption="Tulipános Porta – tágas kert">
+                    <picture>
+                        <source srcset="36848324.webp" type="image/webp">
+                        <img src="36848324.jpg" alt="Tulipános Porta – tágas kert" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Tágas kert</div>
+                    </div>
+                </div>
+
+                <!-- 12 -->
+                <div class="gallery-item" data-category="kert" data-index="11"
+                    data-caption="Dinnyési vendégház – napsugaras terasz">
+                    <picture>
+                        <source srcset="36848325.webp" type="image/webp">
+                        <img src="36848325.jpg" alt="Dinnyési vendégház – napsugaras terasz" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Napsugaras terasz</div>
+                    </div>
+                </div>
+
+                <!-- 13 -->
+                <div class="gallery-item initially-hidden" data-category="reszlet" data-index="12"
+                    data-caption="Tulipános Porta – hagyományos tárgyak">
+                    <picture>
+                        <source srcset="36848326.webp" type="image/webp">
+                        <img src="36848326.jpg" alt="Tulipános Porta – hagyományos tárgyak" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Hagyományos részletek</div>
+                    </div>
+                </div>
+
+                <!-- 14 -->
+                <div class="gallery-item initially-hidden" data-category="reszlet" data-index="13"
+                    data-caption="Vendégház – falusi hangulat">
+                    <picture>
+                        <source srcset="36848327.webp" type="image/webp">
+                        <img src="36848327.jpg" alt="Vendégház – falusi hangulat" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Falusi hangulat</div>
+                    </div>
+                </div>
+
+                <!-- 15 -->
+                <div class="gallery-item initially-hidden" data-category="reszlet" data-index="14"
+                    data-caption="Tulipános Porta – szoba részlet">
+                    <picture>
+                        <source srcset="36848328.webp" type="image/webp">
+                        <img src="36848328.jpg" alt="Tulipános Porta – szoba részlet" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Szoba részlet</div>
+                    </div>
+                </div>
+
+                <!-- 16 -->
+                <div class="gallery-item initially-hidden" data-category="kert" data-index="15"
+                    data-caption="Dinnyési szállás – kert virágokkal">
+                    <picture>
+                        <source srcset="36848329.webp" type="image/webp">
+                        <img src="36848329.jpg" alt="Dinnyési szállás – kert virágokkal" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Virágos kert</div>
+                    </div>
+                </div>
+
+                <!-- 17 -->
+                <div class="gallery-item initially-hidden" data-category="reszlet" data-index="16"
+                    data-caption="Tulipános Porta – esti hangulat">
+                    <picture>
+                        <source srcset="36848330.webp" type="image/webp">
+                        <img src="36848330.jpg" alt="Tulipános Porta – esti hangulat" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Esti hangulat</div>
+                    </div>
+                </div>
+
+                <!-- 18 -->
+                <div class="gallery-item initially-hidden" data-category="haz" data-index="17"
+                    data-caption="Vendégház – nappali belső">
+                    <picture>
+                        <source srcset="36848331.webp" type="image/webp">
+                        <img src="36848331.jpg" alt="Vendégház – nappali belső" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Nappali belső</div>
+                    </div>
+                </div>
+
+                <!-- 19 -->
+                <div class="gallery-item initially-hidden" data-category="reszlet" data-index="18"
+                    data-caption="Tulipános Porta – konyhai részlet">
+                    <picture>
+                        <source srcset="36848332.webp" type="image/webp">
+                        <img src="36848332.jpg" alt="Tulipános Porta – konyhai részlet" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Konyha részlet</div>
+                    </div>
+                </div>
+
+                <!-- 20 -->
+                <div class="gallery-item initially-hidden" data-category="reszlet" data-index="19"
+                    data-caption="Dinnyés – Velencei-tó közelében">
+                    <picture>
+                        <source srcset="36848336.webp" type="image/webp">
+                        <img src="36848336.jpg" alt="Dinnyés – Velencei-tó közelében" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Környékbeli táj</div>
+                    </div>
+                </div>
+
+                <!-- 21 -->
+                <div class="gallery-item initially-hidden" data-category="haz" data-index="20"
+                    data-caption="Tulipános Porta – vendégház homlokzat">
+                    <picture>
+                        <source srcset="9516573.webp" type="image/webp">
+                        <img src="9516573.jpeg" alt="Tulipános Porta – vendégház homlokzat" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Homlokzat</div>
+                    </div>
+                </div>
+
+                <!-- 22 -->
+                <div class="gallery-item initially-hidden" data-category="kert" data-index="21"
+                    data-caption="Vendégház kert – természetes környezet">
+                    <picture>
+                        <source srcset="9516574.webp" type="image/webp">
+                        <img src="9516574.jpeg" alt="Vendégház kert – természetes környezet" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Zöld természet</div>
+                    </div>
+                </div>
+
+                <!-- 23 -->
+                <div class="gallery-item initially-hidden" data-category="reszlet" data-index="22"
+                    data-caption="Tulipános Porta – hagyományos dekoráció">
+                    <picture>
+                        <source srcset="9516575.webp" type="image/webp">
+                        <img src="9516575.jpeg" alt="Tulipános Porta – hagyományos dekoráció" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Hagyományos dekoráció</div>
+                    </div>
+                </div>
+
+                <!-- 24 -->
+                <div class="gallery-item initially-hidden" data-category="kert" data-index="23"
+                    data-caption="Dinnyési vendégház – falusi idill">
+                    <picture>
+                        <source srcset="9516576.webp" type="image/webp">
+                        <img src="9516576.jpeg" alt="Dinnyési vendégház – falusi idill" loading="lazy">
+                    </picture>
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-caption">🔍 Falusi idill</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-expand-actions">
+                <button type="button" class="btn-gallery-toggle" id="btn-gallery-toggle">
+                    <span>📷</span>
+                    <span id="btn-gallery-toggle-text">További fotók megtekintése (összesen 24 kép)</span>
+                </button>
+            </div>
         </div>
     </section>
 
-    <section id="contact-us">
-        <h2 class="section-title" id="title-contact-us">Írjon nekünk</h2>
-        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-            <input type="hidden" name="form-name" value="contact">
-            <p class="hidden" aria-hidden="true"><label>Ha ember vagy, hagyd üresen: <input name="bot-field"></label></p>
-            <div class="form-row">
-                <div>
-                    <label id="contact-us-name" for="name">Név</label>
-                    <input type="text" id="name" name="name" required placeholder="Teljes név">
-                </div>
-                <div>
-                    <label id="contact-us-email" for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="email@pelda.hu">
-                </div>
-                <div>
-                    <label id="contact-us-tel" for="telephone">Mobil Telefonszám</label>
-                    <input type="text" id="telephone" name="telephone" required placeholder="+36 30 123 4567">
-                </div>
+    <!-- ===== Lightbox Modal Component ===== -->
+    <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Képnagyítás">
+        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Bezárás">&times;</button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightbox-prev"
+            aria-label="Előző kép">&#8249;</button>
+        <button type="button" class="lightbox-nav lightbox-next" id="lightbox-next"
+            aria-label="Következő kép">&#8250;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption-bar">
+                <span id="lightbox-caption">Képleírás</span>
+                <span id="lightbox-counter">1 / 24</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Activities Section ===== -->
+    <section id="activities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow" id="eyebrow-activities">🚴 KIKAPCSOLÓDÁS</span>
+                <h2 class="section-title" id="title-activities">Környékbeli Programok</h2>
+                <p class="section-subtitle" id="activities-intro">Dinnyés és a Velencei-tó rengeteg élményt kínál minden
+                    évszakban.</p>
+                <div class="section-divider"></div>
             </div>
 
-            <div>
-                <label id="contact-us-subject" for="subject">Tárgy (opcionális)</label>
-                <input type="text" id="subject" name="subject" placeholder="Pl. Foglalás">
-            </div>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon-pill">🦢</div>
+                    <div class="activity-tag">TERMÉSZETJÁRÁS • 5 PERC SÉTA</div>
+                    <h3 id="act-1-title">Madárdal Tanösvény</h3>
+                    <p id="act-1-desc">Fedezze fel a Dinnyési-fertő gazdag élővilágát egy kellemes túra keretében.
+                        Tökéletes program természetkedvelőknek és családoknak.</p>
+                </div>
 
-            <div>
-                <label id="contact-us-message" for="message">Üzenet</label>
-                <textarea id="message" name="message" rows="6" required placeholder="Üzenet... (min. 10 karakter)"></textarea>
-            </div>
+                <div class="activity-card">
+                    <div class="activity-icon-pill">🚲</div>
+                    <div class="activity-tag">AKTÍV PIHENÉS • KÖZVETLEN ELÉRÉS</div>
+                    <h3 id="act-2-title">Kerékpározás a tó körül</h3>
+                    <p id="act-2-desc">A Velencei-tó körüli kerékpárút kiváló minőségű és nagyrészt sík terep, így
+                        gyerekekkel is könnyen teljesíthető a tókerülés.</p>
+                </div>
 
-            <div style="display:flex;align-items:center;gap:12px;">
-                <button id="contact-us-submit" type="submit">Küldés</button>
-                <div id="form-feedback" class="form-feedback" aria-live="polite">
-                      <p id="contact-form-status" style="color:red"></p>
+                <div class="activity-card">
+                    <div class="activity-icon-pill">🏰</div>
+                    <div class="activity-tag">KULTÚRA & ÉLMÉNY • 3 PERC</div>
+                    <h3 id="act-3-title">Dinnyési Várpark</h3>
+                    <p id="act-3-desc">Egyedülálló szabadtéri kiállítás a közelben, amely a történelmi Magyarország
+                        várait mutatja be kőből és fából készült makettek formájában.</p>
                 </div>
             </div>
-        </form>
+        </div>
     </section>
 
+    <!-- ===== Prices Section ===== -->
+    <section id="prices">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow" id="eyebrow-prices">🏷️ DÍJSZABÁS</span>
+                <h2 class="section-title" id="title-prices">Árak</h2>
+                <p class="section-subtitle" id="prices-subtitle">Átlátható, korrekt árak a teljes vendégház kizárólagos
+                    használatával.</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="pricing-cards-grid">
+                <!-- 1. Előszezon -->
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-season-name" id="price-card-1-title">Előszezon</h3>
+                        <div class="pricing-season-dates" id="price-line-1">01.01 – 04.15</div>
+                        <div class="pricing-amount-group">
+                            <span class="pricing-amount">34.000</span>
+                            <span class="pricing-unit">Ft / éj</span>
+                        </div>
+                    </div>
+
+                    <ul class="pricing-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Teljes vendégház (max. 4 fő)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Felszerelt konyha & étkező</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Tágas kert & homokozó</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Ingyenes Wi-Fi & zárt parkoló</span>
+                        </li>
+                    </ul>
+
+                    <a href="#booking" class="btn-pricing-cta">Időpont választása</a>
+                </div>
+
+                <!-- 2. Főszezon (Featured) -->
+                <div class="pricing-card">
+                    <!--<div class="pricing-featured-badge" id="price-badge-featured">Legnépszerűbb</div>-->
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-season-name" id="price-card-2-title">Főszezon</h3>
+                        <div class="pricing-season-dates" id="price-line-2">04.16 – 10.15</div>
+                        <div class="pricing-amount-group">
+                            <span class="pricing-amount">40.000</span>
+                            <span class="pricing-unit">Ft / éj</span>
+                        </div>
+                    </div>
+
+                    <ul class="pricing-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Teljes vendégház (max. 4 fő)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <strong>Kerti kád használat</strong>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Tágas kert játékokkal, terasz</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Felszerelt konyha, Wi-Fi & parkoló</span>
+                        </li>
+                    </ul>
+
+                    <a href="#booking" class="btn-pricing-cta">Időpont választása</a>
+                </div>
+
+                <!-- 3. Utószezon -->
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-season-name" id="price-card-3-title">Utószezon</h3>
+                        <div class="pricing-season-dates" id="price-line-3">10.16 – 12.31</div>
+                        <div class="pricing-amount-group">
+                            <span class="pricing-amount">34.000</span>
+                            <span class="pricing-unit">Ft / éj</span>
+                        </div>
+                    </div>
+
+                    <ul class="pricing-features-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Teljes vendégház (max. 4 fő)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Kényelmes, fűtött házikó</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Felszerelt konyha & étkező</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Ingyenes Wi-Fi & zárt parkoló</span>
+                        </li>
+                    </ul>
+
+                    <a href="#booking" class="btn-pricing-cta">Időpont választása</a>
+                </div>
+            </div>
+
+            <div class="pricing-notice-box">
+                <span class="notice-icon">ℹ️</span>
+                <p class="notice-text" id="price-note">
+                    Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/fő/éj 18 évnél idősebb vendégek esetén) és
+                    az egész házra vonatkoznak legfeljebb 4 fő részére.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Booking Calendar Section ===== -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow" id="eyebrow-booking">📅 ONLINE NAPTÁR</span>
+                <h2 class="section-title" id="title-booking">Foglaltsági Naptár</h2>
+                <p class="section-subtitle" id="booking-subtitle">
+                    Tekintse meg szabad időpontjainkat, vagy válassza ki a tervezett érkezés és távozás napját!
+                </p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="booking-container">
+                <div class="booking-header">
+                    <div class="booking-title-group">
+                        <div id="calendar-sync-badge" class="calendar-sync-badge">
+                            <span class="dot"></span>
+                            <span class="badge-text">Google Naptár kapcsolat</span>
+                        </div>
+                    </div>
+                    <div class="calendar-controls">
+                        <button type="button" id="btn-prev-month" class="calendar-nav-btn"
+                            aria-label="Előző hónap">‹</button>
+                        <button type="button" id="btn-calendar-today" class="calendar-today-btn">Ma</button>
+                        <button type="button" id="btn-next-month" class="calendar-nav-btn"
+                            aria-label="Következő hónap">›</button>
+                    </div>
+                </div>
+
+                <!-- 2-Month side by side grid -->
+                <div id="booking-calendar-wrapper" class="months-wrapper">
+                    <!-- Dynamically rendered by calendar.js -->
+                </div>
+
+                <!-- Legend -->
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <span class="legend-box available"></span>
+                        <span id="legend-label-available">Szabad</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-box booked"></span>
+                        <span id="legend-label-booked">Foglalt</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-box arrival"></span>
+                        <span id="legend-label-arrival">Érkezési nap (délután)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-box leave"></span>
+                        <span id="legend-label-leave">Távozási nap (délelőtt)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-box selected"></span>
+                        <span id="legend-label-selected">Kiválasztva</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Booking Selection & Action Card -->
+                <div id="booking-action-card" class="booking-action-card">
+                    <div id="calendar-booking-alert" class="booking-alert" role="alert"></div>
+                    <div id="booking-selection-summary" class="booking-selection-info">
+                        <!-- Populated dynamically -->
+                    </div>
+                    <div class="selection-actions">
+                        <button type="button" id="btn-book-now" class="btn-book-now" disabled>
+                            <span style="font-size:1.1rem">📩</span>
+                            <span>Foglalási érdeklődés elküldése</span>
+                        </button>
+                        <button type="button" id="btn-clear-selection" class="btn-clear-selection"
+                            style="display: none;">
+                            Törlés
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Reviews Section ===== -->
     <section id="reviews">
-        <h2 class="section-title" id="title-reviews">Vélemények</h2>
-        <div class="contact-container" style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;">
-            <div id="badge-hu"><a href="https://szallas.hu/tulipanos-porta-es-vendeghaz-dinnyes" style="display: block; width: 200px; height: 220px; text-decoration: none !important;background: #FFF"> <div class="excellent_accommodation_holder" style="width: 198px; height: 218px; border: 1px solid #666; position: relative; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000; text-align: center; line-height: normal !important;"> <div class="excellent_badge" style="background: url(https://s.szalas.hu/images/excellent/hu/479796.gif); width: 192px; height: 145px; margin: 1px auto; padding: 0px;"></div> <div class="excellent_hotel_name" style="width: 194px; height: 30px; overflow: hidden; margin: 0px auto 2px auto; color: #D20000; padding: 0px;"></div> <div class="rating_count_text" style="width: 194px; height: 34px; overflow: hidden; color: #000;"> <script type="text/javascript" src="//szallas.hu/js/excellent/479796"></script> </div> </div> </a></div>
-            <div id="badge-en" class="hidden"><a href="https://szallas.hu/tulipanos-porta-es-vendeghaz-dinnyes" style="display: block; width: 200px; height: 220px; text-decoration: none !important;background: #FFF"> <div class="excellent_accommodation_holder" style="width: 198px; height: 218px; border: 1px solid #666; position: relative; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000; text-align: center; line-height: normal !important;"> <div class="excellent_badge" style="background: url(https://s.szalas.hu/images/excellent/en/479796.gif); width: 192px; height: 145px; margin: 1px auto; padding: 0px;"></div> <div class="excellent_hotel_name" style="width: 194px; height: 30px; overflow: hidden; margin: 0px auto 2px auto; color: #D20000; padding: 0px;"></div> <div class="rating_count_text" style="width: 194px; height: 34px; overflow: hidden; color: #000;"> <script type="text/javascript" src="//revngo.com/js/excellent/479796"></script> </div> </div> </a></div>
-            <div id="badge-de" class="hidden"><a href="https://szallas.hu/tulipanos-porta-es-vendeghaz-dinnyes" style="display: block; width: 200px; height: 220px; text-decoration: none !important;background: #FFF"> <div class="excellent_accommodation_holder" style="width: 198px; height: 218px; border: 1px solid #666; position: relative; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000; text-align: center; line-height: normal !important;"> <div class="excellent_badge" style="background: url(https://s.szalas.hu/images/excellent/de/479796.gif); width: 192px; height: 145px; margin: 1px auto; padding: 0px;"></div> <div class="excellent_hotel_name" style="width: 194px; height: 30px; overflow: hidden; margin: 0px auto 2px auto; color: #D20000; padding: 0px;"></div> <div class="rating_count_text" style="width: 194px; height: 34px; overflow: hidden; color: #000;"> <script type="text/javascript" src="//de.revngo.com/js/excellent/479796"></script> </div> </div> </a></div>
-        </div>
-
-        <div class="reviews-grid" aria-label="Facebook reviews">
-            <div class="review-card">
-                <p class="review-text">„Két napot, egy éjszakát töltöttünk el a férjemmel ebben a számunkra legcukibb kis parasztházban. 🏚🌷Pöttyös bögre, amiből jóízű a reggeli kávé a jól felszerelt, pöttyös,  kockás textilekkel díszített álomcuki kis konyhában. 🥰 A tulajdonos minden apró részletre odafigyelt. Kreativitása, lelkesedése határtalan! Egyébként nagyon kedves, segítőkész! Gyerekeknek mesekönyvek, társasjátékok, diavetítő és hatalmas füves kert áll rendelkezésre a vidám időtöltéshez. Pároknak is ideális, ha csak egymásra szeretnétek odafigyelni, elvonulni a stresszes mindennapoktól. A házikóban tisztaság és rend uralkodik.
-....és olyan nagyon jó illata van mindennek. 🥰 A háznak, az ágyneműknek, a törölközőnek. Még most is érzem az orromban! 😊🌷 Ha kedved van, körbebiciklizheted a Velencei- tavat is, vagy beugrasz a közeli Várparkot megcsodálni. 
-Szóval ha egy mesebeli házikóra vágysz, akkor ez a Te szálláshelyed is lehet! 🏚🌷🥰”</p>
-                <div class="review-meta"><span class="review-author">F. Viki</span><a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow" id="eyebrow-reviews">⭐ VENDÉGÉLMÉNYEK</span>
+                <h2 class="section-title" id="title-reviews">Vélemények</h2>
+                <p class="section-subtitle">Olvassa el korábbi vendégeink tapasztalatait és értékeléseit!</p>
+                <div class="section-divider"></div>
             </div>
 
-            <div class="review-card">
-                <p class="review-text">„Ha csak egy szóval lehetne jellemezni a helyet, azt írnám: csoda!! 
-Negyedszerre voltunk a családommal, de nem lehet megunni. Jövőre (és az után) újra megyünk.
-Csend, nyugalom, gyönyörű ház és udvar, maximális tisztaság!
-A házigazda, Erika, pedig nagyon nagyon kedves, és segítőkész! 
-Ajánlani tudom csak mindenkinek!"</p>
-                <div class="review-meta"><span class="review-author">Sz-K. Veronika</span><a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+            <div class="reviews-rating-banner">
+                <div class="rating-badge-pill">
+                    <span class="rating-stars">★★★★★</span>
+                    <span>5.0 / 5.0 Kiváló Vendégértékelés</span>
+                </div>
             </div>
 
-            <div class="review-card">
-                <p class="review-text">„Sajnos csak 5 csillagot tudunk adni, különben 10-et is adnánk.
-Az emlékkönyvben leírtuk azt, amit a helytől és tulajdonosától kaptunk, de röviden itt is leírjuk.
-Tiszta, nyugodt és csendes környezet várt minket, egy végtelenül kedves, barátságos tulajdonossal együtt.
-A házikó olyan otthonos volt, ahol szívünk szerint el is éldegélnénk, nem csak pár napig. 
-Akár gyerekkel, akár anélkül, mindenkinek ajánljuk és amint tehetjük, visszatérünk, csak ne akkor foglaljátok le, amikor mi szeretnénk. 😉
-Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és sok sikert a továbbiakban! Remélhetőleg, hamarosan találkozunk! 😊 üdv, Viki, Laci 🤗 és Inge 🐾"</p>
-                <div class="review-meta"><span class="review-author">V. Viktória Anna</span><a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+            <div class="reviews-grid" aria-label="Facebook reviews">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div>
+                        <div class="review-quote-icon">“</div>
+                        <p class="review-text">„Két napot, egy éjszakát töltöttünk el a férjemmel ebben a számunkra
+                            legcukibb kis parasztházban. 🏚🌷 Pöttyös bögre, amiből jóízű a reggeli kávé a jól
+                            felszerelt konyhában. A tulajdonos minden apró részletre odafigyelt. Gyerekeknek
+                            mesekönyvek, társasjátékok és hatalmas füves kert áll rendelkezésre. Pároknak is ideális
+                            elvonulni a stresszes mindennapoktól. A házikóban tisztaság és rend uralkodik. És olyan
+                            nagyon jó illata van mindennek!”</p>
+                    </div>
+                    <div class="review-author-row">
+                        <div class="review-author-info">
+                            <div class="author-avatar">FV</div>
+                            <span class="review-author">F. Viki</span>
+                        </div>
+                        <a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer"
+                            class="review-platform-badge">
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div>
+                        <div class="review-quote-icon">“</div>
+                        <p class="review-text">„Ha csak egy szóval lehetne jellemezni a helyet, azt írnám: csoda!!
+                            Negyedszerre voltunk a családommal, de nem lehet megunni. Jövőre (és az után) újra megyünk.
+                            Csend, nyugalom, gyönyörű ház és udvar, maximális tisztaság! A házigazda, Erika, pedig
+                            nagyon nagyon kedves és segítőkész! Ajánlani tudom csak mindenkinek!”</p>
+                    </div>
+                    <div class="review-author-row">
+                        <div class="review-author-info">
+                            <div class="author-avatar">SZ</div>
+                            <span class="review-author">Sz-K. Veronika</span>
+                        </div>
+                        <a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer"
+                            class="review-platform-badge">
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div>
+                        <div class="review-quote-icon">“</div>
+                        <p class="review-text">„Sajnos csak 5 csillagot tudunk adni, különben 10-et is adnánk. Tiszta,
+                            nyugodt és csendes környezet várt minket, egy végtelenül kedves, barátságos tulajdonossal
+                            együtt. A házikó olyan otthonos volt, ahol szívünk szerint el is éldegélnénk. Akár
+                            gyerekkel, akár anélkül, mindenkinek ajánljuk és amint tehetjük, visszatérünk!”</p>
+                    </div>
+                    <div class="review-author-row">
+                        <div class="review-author-info">
+                            <div class="author-avatar">VV</div>
+                            <span class="review-author">V. Viktória Anna</span>
+                        </div>
+                        <a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer"
+                            class="review-platform-badge">
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Official Szallas.hu Badge integration -->
+            <div class="szallas-badge-wrapper">
+                <div id="badge-hu">
+                    <a href="https://szallas.hu/tulipanos-porta-es-vendeghaz-dinnyes" target="_blank" rel="noopener"
+                        style="display: block; width: 200px; height: 220px; text-decoration: none !important; background: #FFF;">
+                        <div class="excellent_accommodation_holder"
+                            style="width: 198px; height: 218px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; position: relative; font-family: sans-serif; font-size: 12px; color: #000; text-align: center;">
+                            <div class="excellent_badge"
+                                style="background: url(https://s.szalas.hu/images/excellent/hu/479796.gif); width: 192px; height: 145px; margin: 2px auto;">
+                            </div>
+                            <div class="excellent_hotel_name"
+                                style="width: 194px; height: 30px; overflow: hidden; margin: 0px auto; color: #D20000;">
+                            </div>
+                            <div class="rating_count_text"
+                                style="width: 194px; height: 34px; overflow: hidden; color: #000;">
+                                <script type="text/javascript" src="//szallas.hu/js/excellent/479796"></script>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="badge-en" class="hidden">
+                    <a href="https://szallas.hu/tulipanos-porta-es-vendeghaz-dinnyes" target="_blank" rel="noopener"
+                        style="display: block; width: 200px; height: 220px; text-decoration: none !important; background: #FFF;">
+                        <div class="excellent_accommodation_holder"
+                            style="width: 198px; height: 218px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; position: relative; font-family: sans-serif; font-size: 12px; color: #000; text-align: center;">
+                            <div class="excellent_badge"
+                                style="background: url(https://s.szalas.hu/images/excellent/en/479796.gif); width: 192px; height: 145px; margin: 2px auto;">
+                            </div>
+                            <div class="excellent_hotel_name"
+                                style="width: 194px; height: 30px; overflow: hidden; margin: 0px auto; color: #D20000;">
+                            </div>
+                            <div class="rating_count_text"
+                                style="width: 194px; height: 34px; overflow: hidden; color: #000;">
+                                <script type="text/javascript" src="//revngo.com/js/excellent/479796"></script>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="badge-de" class="hidden">
+                    <a href="https://szallas.hu/tulipanos-porta-es-vendeghaz-dinnyes" target="_blank" rel="noopener"
+                        style="display: block; width: 200px; height: 220px; text-decoration: none !important; background: #FFF;">
+                        <div class="excellent_accommodation_holder"
+                            style="width: 198px; height: 218px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; position: relative; font-family: sans-serif; font-size: 12px; color: #000; text-align: center;">
+                            <div class="excellent_badge"
+                                style="background: url(https://s.szalas.hu/images/excellent/de/479796.gif); width: 192px; height: 145px; margin: 2px auto;">
+                            </div>
+                            <div class="excellent_hotel_name"
+                                style="width: 194px; height: 30px; overflow: hidden; margin: 0px auto; color: #D20000;">
+                            </div>
+                            <div class="rating_count_text"
+                                style="width: 194px; height: 34px; overflow: hidden; color: #000;">
+                                <script type="text/javascript" src="//de.revngo.com/js/excellent/479796"></script>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 Tulipános Porta és Vendégház | Dinnyés</p>
+    <!-- ===== Contact & Inquiry Section ===== -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow" id="eyebrow-contact">📫 ELÉRHETŐSÉG</span>
+                <h2 class="section-title" id="title-contact">Kapcsolat & Érdeklődés</h2>
+                <p class="section-subtitle">Kérdése van, vagy közvetlenül szeretne érdeklődni? Keressen minket
+                    bizalommal!</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="contact-layout">
+                <!-- Contact Information Column -->
+                <div class="contact-info-panel">
+                    <div class="host-card">
+                        <div class="host-icon-circle">👩‍💼</div>
+                        <div>
+                            <div class="host-role">Házigazda</div>
+                            <div class="host-details-name" id="contact-name">Dr. Belser Barbara</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-items-list">
+                        <div class="contact-item">
+                            <div class="contact-icon-box">📞</div>
+                            <div>
+                                <div class="contact-item-title">Telefonszám</div>
+                                <div class="contact-item-value">
+                                    <a href="tel:+36204858993">+36 20 485 8993</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-box">✉️</div>
+                            <div>
+                                <div class="contact-item-title">Email Cím</div>
+                                <div class="contact-item-value">
+                                    <a href="mailto:info@tulipanosporta.hu">info@tulipanosporta.hu</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-box">📍</div>
+                            <div>
+                                <div class="contact-item-title">Cím</div>
+                                <div class="contact-item-value">
+                                    2485 Gárdony, Dinnyés-Rákóczi utca 9.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-box">🕒</div>
+                            <div>
+                                <div class="contact-item-title">Érkezés & Távozás</div>
+                                <div class="contact-item-value" style="font-size: 0.96rem;">
+                                    Érkezés: 14:00-tól • Távozás: 10:00-ig
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-frame-wrapper">
+                        <iframe
+                            src="https://maps.google.com/maps?width=1900&height=400&hl=en&q=47.174241723682975%2C%2018.564711288723284&t=h&z=19&ie=UTF8&iwloc=B&output=embed"
+                            width="100%" height="260" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Tulipános Porta elhelyezkedése a térképen"></iframe>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form Column -->
+                <div class="contact-form-panel" id="contact-us">
+                    <h3 id="title-contact-us">Írjon nekünk</h3>
+                    <p class="form-desc">Töltse ki az űrlapot, és hamarosan felvesszük Önnel a kapcsolatot!</p>
+
+                    <form id="contact-form" name="contact" method="POST" data-netlify="true"
+                        netlify-honeypot="bot-field" class="contact-form">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden" aria-hidden="true"><label>Ha ember vagy, hagyd üresen: <input
+                                    name="bot-field"></label></p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label id="contact-us-name" for="name">Név *</label>
+                                <input type="text" id="name" name="name" required placeholder="Teljes név">
+                            </div>
+                            <div class="form-group">
+                                <label id="contact-us-tel" for="telephone">Mobil Telefonszám *</label>
+                                <input type="text" id="telephone" name="telephone" required
+                                    placeholder="+36 30 123 4567">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label id="contact-us-email" for="email">Email Cím *</label>
+                            <input type="email" id="email" name="email" required placeholder="email@pelda.hu">
+                        </div>
+
+                        <div class="form-group">
+                            <label id="contact-us-subject" for="subject">Tárgy (opcionális)</label>
+                            <input type="text" id="subject" name="subject" placeholder="Pl. Érdeklődés, foglalás">
+                        </div>
+
+                        <div class="form-group">
+                            <label id="contact-us-message" for="message">Üzenet *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Írja le kérdését vagy a tervezett időpontot... (min. 10 karakter)"></textarea>
+                        </div>
+
+                        <div>
+                            <button id="contact-us-submit" type="submit" class="btn-form-submit">
+                                <span>✉️</span>
+                                <span>Üzenet elküldése</span>
+                            </button>
+                            <div id="form-feedback" class="form-feedback" aria-live="polite">
+                                <p id="contact-form-status"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Site Footer ===== -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <picture>
+                    <source srcset="logo.webp" type="image/webp">
+                    <img src="logo.png" alt="Tulipános Porta Logo" width="65" height="65">
+                </picture>
+                <p id="footer-tagline">
+                    Hagyományos magyar falusi vendégház Dinnyésen, a Velencei-tó partján. Csendes pihenés, hatalmas kert
+                    és kényelem az év minden szakában.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4 id="footer-quicklinks-title">Gyorslinkek</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">🌷 Rólunk</a></li>
+                    <li><a href="#gallery">📷 Galéria</a></li>
+                    <li><a href="#prices">🏷️ Árak</a></li>
+                    <li><a href="#booking">📅 Foglaltsági naptár</a></li>
+                    <li><a href="#activities">🚴 Környékbeli programok</a></li>
+                    <li><a href="#reviews">⭐ Vélemények</a></li>
+                    <li><a href="#contact">📫 Kapcsolat</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 id="footer-contact-title">Kapcsolat</h4>
+                <div class="footer-contact-items">
+                    <p><strong>Cím:</strong> 2485 Gárdony, Dinnyés, Rákóczi u. 9.</p>
+                    <p><strong>Telefon:</strong> <a href="tel:+36204858993">+36 20 485 8993</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@tulipanosporta.hu">info@tulipanosporta.hu</a></p>
+                    <p style="margin-top: 10px;">
+                        <a href="https://www.facebook.com/tulipanosporta" target="_blank" rel="noopener noreferrer"
+                            style="display: inline-flex; align-items: center; gap: 6px; color: #ffffff; font-weight: 600;">
+                            <span>🌐 Facebook oldal</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                © 2026 Tulipános Porta és Vendégház | Dinnyés, Velencei-tó. Minden jog fenntartva.
+            </div>
+            <div class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <span>Vissza a tetejére ↑</span>
+            </div>
+        </div>
     </footer>
 
+    <!-- ===== Scripts & Translations ===== -->
     <script>
         const translations = {
             hu: {
-                navAbout: "Rólunk", navGallery: "Galéria", navPrices: "Árak", navBooking: "Foglaltság", navActivities: "Programok", navContact: "Kapcsolat", navContactUs: "Írjon nekünk",
+                navAbout: "Rólunk", navGallery: "Galéria", navPrices: "Árak", navBooking: "Foglaltság", navActivities: "Programok", navReviews: "Vélemények", navContact: "Kapcsolat", navContactUs: "Írjon nekünk", navCtaText: "Foglalás",
+                heroBadge: "Falusi vendégház • Dinnyés, Velencei-tó",
                 heroTitle: "Hagyomány és Kényelem a Velencei-tónál",
-                heroSubtitle: "Pihenés Dinnyés szívében, falusi hangulatban.",
+                heroSubtitle: "Pihenés Dinnyés szívében, falusi hangulatban – tágas kerttel, kerti káddal és meghitt kényelemmel az egész családnak.",
+                heroBtnBookText: "Foglaltság ellenőrzése",
+                heroBtnGalleryText: "Képgaléria megtekintése",
+                trust1Title: "4 Fős Vendégház", trust1Desc: "Egész ház privát használattal",
+                trust2Title: "Gyermekbarát Kert", trust2Desc: "Homokozó & játékok",
+                trust3Title: "Kerti Kád", trust3Desc: "Napkollektoros fűtéssel",
+                trust4Title: "Velencei-tó Közelében", trust4Desc: "Kerékpárút & Várpark mellett",
                 titleAbout: "A Vendégházról",
                 aboutDesc: "Sok szeretettel várjuk vendégeinket a Tulipános Portán, Dinnyés csendes utcájában. Vendégházunk egész évben nyitva tart, ötvözve a hagyományos magyar falusi építészet báját a modern kényelemmel. A ház egy szobával rendelkezik, amely legfeljebb 4 fő számára biztosít kényelmes pihenést.",
                 feat1: "Teljesen gyermekbarát környezet",
                 feat2: "Tágas kert homokozóval és játékokkal",
-                feat3: "Kerti kád (napkollektoros fűtéssel, napos időben)",
+                feat3: "Kerti kád (napkollektoros fűtéssel)",
                 feat4: "Jól felszerelt konyha és étkező",
-                feat5: "Egész évben foglalható",
+                feat5: "Egész évben foglalható, fűtött szállás",
+                feat6: "Ingyenes zárt parkolás az udvarban",
                 titleGallery: "Galéria",
+                gallerySubtitle: "Pillantson be a Tulipános Porta meghitt tereibe és zöldellő udvarába!",
+                filterAll: "Összes kép (24)", filterHouse: "Vendégház & Szobák", filterGarden: "Kert & Kerti kád", filterDetails: "Hangulat & Részletek",
+                galleryShowMore: "További fotók megtekintése (összesen 24 kép)",
+                galleryShowLess: "Kevesebb kép mutatása",
                 titleActivities: "Környékbeli Programok",
                 activitiesIntro: "Dinnyés és a Velencei-tó rengeteg élményt kínál minden évszakban.",
                 act1Title: "Madárdal Tanösvény",
@@ -975,41 +2842,57 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 act2Desc: "A Velencei-tó körüli kerékpárút kiváló minőségű és nagyrészt sík terep, így gyerekekkel is könnyen teljesíthető a tókerülés.",
                 act3Title: "Dinnyési Várpark",
                 act3Desc: "Egyedülálló szabadtéri kiállítás a közelben, amely a történelmi Magyarország várait mutatja be kőből és fából készült makettek formájában.",
-                titleContact: "Kapcsolat",
+                titlePrices: "Árak",
+                pricesSubtitle: "Átlátható, korrekt árak a teljes vendégház kizárólagos használatával.",
+                priceCard1Title: "Előszezon",
+                priceLine1: "01.01 – 04.15",
+                priceCard2Title: "Főszezon",
+                priceLine2: "04.16 – 10.15",
+                priceCard3Title: "Utószezon",
+                priceLine3: "10.16 – 12.31",
+                priceNote: "Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/fő/éj 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak legfeljebb 4 fő részére.",
+                titleContact: "Kapcsolat & Érdeklődés",
                 titleContactUs: "Írjon nekünk",
                 titleReviews: "Vélemények",
-                contactName: "<strong>Házigazda:</strong> Dr. Belser Barbara",
-                contactUsEmail: "Email",
-                contactUsName: "Név",
+                contactName: "Dr. Belser Barbara",
+                contactUsEmail: "Email Cím *",
+                contactUsName: "Név *",
                 contactUsSubject: "Tárgy (opcionális)",
-                contactUsMessage: "Üzenet",
-                contactUsTel: "Mobil Telefonszám",
-                contactUsSubmit: "Küldés",
+                contactUsMessage: "Üzenet *",
+                contactUsTel: "Mobil Telefonszám *",
+                contactUsSubmit: "Üzenet elküldése",
                 contactUsEmailPlaceholder: "email@pelda.hu",
                 contactUsNamePlaceholder: "Teljes név",
                 contactUsTelPlaceholder: "+36 30 123 4567",
-                contactUsSubjectPlaceholder: "Például foglalás kérdése",
-                contactUsMessagePlaceholder: "Üzenet... (minimum 10 karakter)",
+                contactUsSubjectPlaceholder: "Pl. Érdeklődés, foglalás",
+                contactUsMessagePlaceholder: "Írja le kérdését vagy a tervezett időpontot... (min. 10 karakter)",
                 contactUsThankYou: "Köszönjük, hogy kapcsolatba lépett velünk! Hamarosan válaszolunk.",
-                contactUsError: "Hiba történt az üzenet küldése során. Kérjük, próbálja meg később újra.",
-                titlePrices: "Árak",
-                priceLine1: "Előszezon (01.01-04.15): 34.000 Ft / nap",
-                priceLine2: "Főszezon (04.16-10.15): 40.000 Ft / nap",
-                priceLine3: "Utószezon (10.15-12.31): 34.000 Ft / nap",
-                priceNote: "Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/nap 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak."
+                contactUsError: "Hiba történt az üzenet küldése során. Kérjük, próbálja meg később újra."
             },
             en: {
-                navAbout: "About Us", navGallery: "Gallery", navPrices: "Prices", navBooking: "Availability", navActivities: "Activities", navContact: "Contact", navContactUs: "Contact Us",
+                navAbout: "About Us", navGallery: "Gallery", navPrices: "Prices", navBooking: "Availability", navActivities: "Activities", navReviews: "Reviews", navContact: "Contact", navContactUs: "Contact Us", navCtaText: "Book Now",
+                heroBadge: "Rustic Guesthouse • Dinnyés, Lake Velence",
                 heroTitle: "Tradition and Comfort at Lake Velence",
-                heroSubtitle: "Relaxation in the heart of Dinnyés with a rustic atmosphere.",
+                heroSubtitle: "Relaxation in the heart of Dinnyés with a rustic atmosphere – spacious garden, outdoor tub, and cozy comfort all year round.",
+                heroBtnBookText: "Check Availability",
+                heroBtnGalleryText: "View Photo Gallery",
+                trust1Title: "For 4 Guests", trust1Desc: "Private house all for you",
+                trust2Title: "Child-Safe Garden", trust2Desc: "Sandbox & outdoor toys",
+                trust3Title: "Outdoor Garden Tub", trust3Desc: "Solar-heated in sunshine",
+                trust4Title: "Near Lake Velence", trust4Desc: "Bicycle route & Castle Park",
                 titleAbout: "About the Guest House",
                 aboutDesc: "We warmly welcome our guests to Tulipános Porta in a quiet street of Dinnyés. Our guest house is open all year round, blending the charm of traditional Hungarian village architecture with modern comfort. The house features one room, providing a comfortable stay for up to 4 people.",
                 feat1: "Completely child-safe environment",
                 feat2: "Spacious garden with a sandbox and toys",
-                feat3: "Garden tub (solar-heated, available in sunny weather)",
+                feat3: "Garden tub (solar-heated in sunny weather)",
                 feat4: "Fully equipped kitchen and dining area",
                 feat5: "Available for booking all year round",
+                feat6: "Free private enclosed parking inside",
                 titleGallery: "Gallery",
+                gallerySubtitle: "Take a peek into the cozy spaces and lush garden of Tulipános Porta!",
+                filterAll: "All Photos (24)", filterHouse: "House & Rooms", filterGarden: "Garden & Tub", filterDetails: "Mood & Details",
+                galleryShowMore: "View all photos (24 total)",
+                galleryShowLess: "Show fewer photos",
                 titleActivities: "Nearby Activities",
                 activitiesIntro: "Dinnyés and Lake Velence offer plenty of experiences in every season.",
                 act1Title: "Birdsong Nature Trail",
@@ -1018,41 +2901,57 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 act2Desc: "The bike path around Lake Velence is high quality and mostly flat, making it easy for families to complete the circuit.",
                 act3Title: "Dinnyés Castle Park",
                 act3Desc: "A unique open-air exhibition nearby showcasing models of historical Hungarian castles made of stone and wood.",
-                titleContact: "Contact",
-                titleContactUs: "Contact us",
+                titlePrices: "Prices",
+                pricesSubtitle: "Transparent, honest pricing with exclusive use of the entire guest house.",
+                priceCard1Title: "Pre-season",
+                priceLine1: "01.01 – 04.15",
+                priceCard2Title: "Main Season",
+                priceLine2: "04.16 – 10.15",
+                priceCard3Title: "Post-season",
+                priceLine3: "10.16 – 12.31",
+                priceNote: "Prices do not include tourist tax (600 HUF/person/night for guests over 18) and are for the entire house (up to 4 people).",
+                titleContact: "Contact & Inquiries",
+                titleContactUs: "Send Us a Message",
                 titleReviews: "Reviews",
-                contactName: "<strong>Host:</strong> Dr. Barbara Belser",
-                contactUsEmail: "Email",
-                contactUsName: "Name",
+                contactName: "Dr. Barbara Belser",
+                contactUsEmail: "Email Address *",
+                contactUsName: "Full Name *",
                 contactUsSubject: "Subject (optional)",
-                contactUsMessage: "Message",
-                contactUsTel: "Mobile",
-                contactUsSubmit: "Send",
+                contactUsMessage: "Message *",
+                contactUsTel: "Mobile Phone *",
+                contactUsSubmit: "Send Message",
                 contactUsEmailPlaceholder: "email@example.com",
                 contactUsNamePlaceholder: "Full Name",
                 contactUsTelPlaceholder: "+36 30 123 4567",
-                contactUsSubjectPlaceholder: "e.g. Booking Inquiry",
-                contactUsMessagePlaceholder: "Message... (min. 10 characters)",
+                contactUsSubjectPlaceholder: "e.g. Booking inquiry",
+                contactUsMessagePlaceholder: "Write your question or desired dates... (min. 10 characters)",
                 contactUsThankYou: "Thank you for reaching out! We will get back to you soon.",
-                contactUsError: "An error occurred while sending your message. Please try again later.",
-                titlePrices: "Prices",
-                priceLine1: "Pre-season (01.01-04.15): 34.000 Ft / day",
-                priceLine2: "Season (04.16-10.15): 40.000 Ft / day",
-                priceLine3: "Post-season (10.15-12.31): 34.000 Ft / day",
-                priceNote: "Prices do not include tourist tax (600 Ft/day for guests older than 18 years) and are for the entire house."
+                contactUsError: "An error occurred while sending your message. Please try again later."
             },
             de: {
-                navAbout: "Über uns", navGallery: "Galerie", navPrices: "Preise", navBooking: "Belegung", navActivities: "Aktivitäten", navContact: "Kontakt", navContactUs: "Kontaktieren Sie uns",
+                navAbout: "Über uns", navGallery: "Galerie", navPrices: "Preise", navBooking: "Belegung", navActivities: "Aktivitäten", navReviews: "Bewertungen", navContact: "Kontakt", navContactUs: "Kontaktieren Sie uns", navCtaText: "Buchen",
+                heroBadge: "Ländliches Gästehaus • Dinnyés, Velencer See",
                 heroTitle: "Tradition und Komfort am Velencer See",
-                heroSubtitle: "Entspannung im Herzen von Dinnyés in ländlicher Atmosphäre.",
+                heroSubtitle: "Entspannung im Herzen von Dinnyés in ländlicher Atmosphäre – mit großem Garten, Gartenwanne und gemütlichem Komfort das ganze Jahr über.",
+                heroBtnBookText: "Verfügbarkeit prüfen",
+                heroBtnGalleryText: "Bildergalerie ansehen",
+                trust1Title: "Für 4 Personen", trust1Desc: "Ganzes Haus zur Alleinnutzung",
+                trust2Title: "Kinderfreundlicher Garten", trust2Desc: "Sandkasten & Spiele",
+                trust3Title: "Gartenwanne", trust3Desc: "Solarbeheizt bei Sonnenschein",
+                trust4Title: "Am Velencer See", trust4Desc: "Radweg & Burgenpark direkt nebenan",
                 titleAbout: "Über das Gästehaus",
                 aboutDesc: "Wir heißen unsere Gäste in der Tulipános Porta in einer ruhigen Straße von Dinnyés herzlich willkommen. Unser Gästehaus ist ganzjährig geöffnet und verbindet den Charme der traditionellen ungarischen Dorfarchitektur mit modernem Komfort. Das Haus verfügt über ein Zimmer, das bequem Platz für bis zu 4 Personen bietet.",
                 feat1: "Vollständig kindersichere Umgebung",
                 feat2: "Großer Garten mit Sandkasten und Spielzeug",
-                feat3: "Gartenwanne (solarbeheizt, bei sonnigem Wetter verfügbar)",
+                feat3: "Gartenwanne (solarbeheizt bei sonnigem Wetter)",
                 feat4: "Voll ausgestattete Küche und Essbereich",
-                feat5: "Ganzjährig buchbar",
+                feat5: "Ganzjährig buchbar, beheiztes Haus",
+                feat6: "Kostenlose geschlossene Parkplätze im Hof",
                 titleGallery: "Galerie",
+                gallerySubtitle: "Werfen Sie einen Blick in die gemütlichen Räume und den grünen Hof der Tulipános Porta!",
+                filterAll: "Alle Fotos (24)", filterHouse: "Haus & Zimmer", filterGarden: "Garten & Wanne", filterDetails: "Stimmung & Details",
+                galleryShowMore: "Alle Fotos anzeigen (insgesamt 24)",
+                galleryShowLess: "Weniger Fotos anzeigen",
                 titleActivities: "Aktivitäten in der Nähe",
                 activitiesIntro: "Dinnyés und der Velencer See bieten zu jeder Jahreszeit viele Erlebnisse.",
                 act1Title: "Vogelgesang-Lehrpfad",
@@ -1061,157 +2960,377 @@ Erika, szeretnénk megköszönni Neked MINDENT, és kívánunk minden jót és s
                 act2Desc: "Der Radweg um den Velencer See ist von hoher Qualität und größtenteils flach, so dass die Seeumrundung auch für Familien leicht zu bewältigen ist.",
                 act3Title: "Burgenpark Dinnyés",
                 act3Desc: "Eine einzigartige Freilichtausstellung in der Nähe, die Modelle historischer ungarischer Burgen aus Stein und Holz zeigt.",
-                titleContact: "Kontakt",
+                titlePrices: "Preise",
+                pricesSubtitle: "Transparente, faire Preise bei exklusiver Nutzung des gesamten Gästehauses.",
+                priceCard1Title: "Vorsaison",
+                priceLine1: "01.01 – 04.15",
+                priceCard2Title: "Hauptsaison",
+                priceLine2: "04.16 – 10.15",
+                priceCard3Title: "Nachsaison",
+                priceLine3: "10.16 – 12.31",
+                priceNote: "Die Preise verstehen sich zzgl. Kurtaxe (600 HUF/Person/Nacht für Gäste ab 18 Jahren) und gelten für das gesamte Haus (bis zu 4 Personen).",
+                titleContact: "Kontakt & Anfragen",
                 titleContactUs: "Kontaktieren Sie uns",
                 titleReviews: "Bewertungen",
-                contactName: "<strong>Gastgeberin:</strong> Dr. Barbara Belser",
-                contactUsEmail: "E-mail",
-                contactUsName: "Name",
-                contactUsSubject: "Subject (optional)",
-                contactUsMessage: "Message",
-                contactUsTel: "Mobile",
-                contactUsSubmit: "Senden",
+                contactName: "Dr. Barbara Belser",
+                contactUsEmail: "E-Mail-Adresse *",
+                contactUsName: "Vollständiger Name *",
+                contactUsSubject: "Betreff (optional)",
+                contactUsMessage: "Nachricht *",
+                contactUsTel: "Mobiltelefon *",
+                contactUsSubmit: "Nachricht senden",
                 contactUsEmailPlaceholder: "email@beispiel.de",
                 contactUsNamePlaceholder: "Vollständiger Name",
                 contactUsTelPlaceholder: "+36 30 123 4567",
                 contactUsSubjectPlaceholder: "z.B. Buchungsanfrage",
-                contactUsMessagePlaceholder: "Nachricht... (min. 10 Zeichen)",
+                contactUsMessagePlaceholder: "Ihre Nachricht oder geplante Termine... (mind. 10 Zeichen)",
                 contactUsThankYou: "Vielen Dank für Ihre Kontaktaufnahme! Wir werden uns in Kürze bei Ihnen melden.",
-                contactUsError: "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
-                titlePrices: "Preise",
-                priceLine1: "Vorsaison (01.01-04.15): 34.000 Ft / Tag",
-                priceLine2: "Saison (04.16-10.15): 40.000 Ft / Tag",
-                priceLine3: "Nachsaison (10.15-12.31): 34.000 Ft / Tag",
-                priceNote: "Die Preise verstehen sich zzgl. Kurtaxe (600 Ft/Tag für Gäste über 18 Jahre) und gelten für das gesamte Haus."
+                contactUsError: "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
             }
         };
 
         function setLang(lang) {
-            // Update Text Content
-            document.getElementById('nav-about').textContent = translations[lang].navAbout;
-            document.getElementById('nav-gallery').textContent = translations[lang].navGallery;
-            document.getElementById('nav-activities').textContent = translations[lang].navActivities;
-            document.getElementById('nav-contact').textContent = translations[lang].navContact;
-            document.getElementById('nav-contact-us').textContent = translations[lang].navContactUs;
-            document.getElementById('nav-prices').textContent = translations[lang].navPrices;
-            if (document.getElementById('nav-booking')) {
-                document.getElementById('nav-booking').textContent = translations[lang].navBooking;
+            const t = translations[lang];
+            if (!t) return;
+
+            // Navigation
+            if (document.getElementById('nav-about')) document.getElementById('nav-about').textContent = t.navAbout;
+            if (document.getElementById('nav-gallery')) document.getElementById('nav-gallery').textContent = t.navGallery;
+            if (document.getElementById('nav-prices')) document.getElementById('nav-prices').textContent = t.navPrices;
+            if (document.getElementById('nav-booking')) document.getElementById('nav-booking').textContent = t.navBooking;
+            if (document.getElementById('nav-activities')) document.getElementById('nav-activities').textContent = t.navActivities;
+            if (document.getElementById('nav-reviews')) document.getElementById('nav-reviews').textContent = t.navReviews;
+            if (document.getElementById('nav-contact')) document.getElementById('nav-contact').textContent = t.navContact;
+            if (document.getElementById('nav-cta-text')) document.getElementById('nav-cta-text').textContent = t.navCtaText;
+
+            // Hero
+            if (document.getElementById('hero-badge')) document.getElementById('hero-badge').textContent = t.heroBadge;
+            if (document.getElementById('hero-title')) document.getElementById('hero-title').textContent = t.heroTitle;
+            if (document.getElementById('hero-subtitle')) document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
+            if (document.getElementById('hero-btn-book-text')) document.getElementById('hero-btn-book-text').textContent = t.heroBtnBookText;
+            if (document.getElementById('hero-btn-gallery-text')) document.getElementById('hero-btn-gallery-text').textContent = t.heroBtnGalleryText;
+
+            // Trust items
+            if (document.getElementById('trust-1-title')) document.getElementById('trust-1-title').textContent = t.trust1Title;
+            if (document.getElementById('trust-1-desc')) document.getElementById('trust-1-desc').textContent = t.trust1Desc;
+            if (document.getElementById('trust-2-title')) document.getElementById('trust-2-title').textContent = t.trust2Title;
+            if (document.getElementById('trust-2-desc')) document.getElementById('trust-2-desc').textContent = t.trust2Desc;
+            if (document.getElementById('trust-3-title')) document.getElementById('trust-3-title').textContent = t.trust3Title;
+            if (document.getElementById('trust-3-desc')) document.getElementById('trust-3-desc').textContent = t.trust3Desc;
+            if (document.getElementById('trust-4-title')) document.getElementById('trust-4-title').textContent = t.trust4Title;
+            if (document.getElementById('trust-4-desc')) document.getElementById('trust-4-desc').textContent = t.trust4Desc;
+
+            // About
+            if (document.getElementById('title-about')) document.getElementById('title-about').textContent = t.titleAbout;
+            if (document.getElementById('about-desc')) document.getElementById('about-desc').textContent = t.aboutDesc;
+            if (document.getElementById('feat-1')) document.getElementById('feat-1').textContent = t.feat1;
+            if (document.getElementById('feat-2')) document.getElementById('feat-2').textContent = t.feat2;
+            if (document.getElementById('feat-3')) document.getElementById('feat-3').textContent = t.feat3;
+            if (document.getElementById('feat-4')) document.getElementById('feat-4').textContent = t.feat4;
+            if (document.getElementById('feat-5')) document.getElementById('feat-5').textContent = t.feat5;
+            if (document.getElementById('feat-6')) document.getElementById('feat-6').textContent = t.feat6;
+
+            // Gallery
+            if (document.getElementById('title-gallery')) document.getElementById('title-gallery').textContent = t.titleGallery;
+            if (document.getElementById('gallery-subtitle')) document.getElementById('gallery-subtitle').textContent = t.gallerySubtitle;
+            if (document.getElementById('filter-all')) document.getElementById('filter-all').textContent = t.filterAll;
+            if (document.getElementById('filter-haz')) document.getElementById('filter-haz').textContent = t.filterHouse;
+            if (document.getElementById('filter-kert')) document.getElementById('filter-kert').textContent = t.filterGarden;
+            if (document.getElementById('filter-reszlet')) document.getElementById('filter-reszlet').textContent = t.filterDetails;
+            updateGalleryToggleButtonText(lang);
+
+            // Activities
+            if (document.getElementById('title-activities')) document.getElementById('title-activities').textContent = t.titleActivities;
+            if (document.getElementById('activities-intro')) document.getElementById('activities-intro').textContent = t.activitiesIntro;
+            if (document.getElementById('act-1-title')) document.getElementById('act-1-title').textContent = t.act1Title;
+            if (document.getElementById('act-1-desc')) document.getElementById('act-1-desc').textContent = t.act1Desc;
+            if (document.getElementById('act-2-title')) document.getElementById('act-2-title').textContent = t.act2Title;
+            if (document.getElementById('act-2-desc')) document.getElementById('act-2-desc').textContent = t.act2Desc;
+            if (document.getElementById('act-3-title')) document.getElementById('act-3-title').textContent = t.act3Title;
+            if (document.getElementById('act-3-desc')) document.getElementById('act-3-desc').textContent = t.act3Desc;
+
+            // Prices
+            if (document.getElementById('title-prices')) document.getElementById('title-prices').textContent = t.titlePrices;
+            if (document.getElementById('prices-subtitle')) document.getElementById('prices-subtitle').textContent = t.pricesSubtitle;
+            if (document.getElementById('price-card-1-title')) document.getElementById('price-card-1-title').textContent = t.priceCard1Title;
+            if (document.getElementById('price-line-1')) document.getElementById('price-line-1').textContent = t.priceLine1;
+            if (document.getElementById('price-card-2-title')) document.getElementById('price-card-2-title').textContent = t.priceCard2Title;
+            if (document.getElementById('price-line-2')) document.getElementById('price-line-2').textContent = t.priceLine2;
+            if (document.getElementById('price-card-3-title')) document.getElementById('price-card-3-title').textContent = t.priceCard3Title;
+            if (document.getElementById('price-line-3')) document.getElementById('price-line-3').textContent = t.priceLine3;
+            if (document.getElementById('price-note')) document.getElementById('price-note').textContent = t.priceNote;
+
+            // Reviews
+            if (document.getElementById('title-reviews')) document.getElementById('title-reviews').textContent = t.titleReviews;
+
+            // Contact
+            if (document.getElementById('title-contact')) document.getElementById('title-contact').textContent = t.titleContact;
+            if (document.getElementById('title-contact-us')) document.getElementById('title-contact-us').textContent = t.titleContactUs;
+            if (document.getElementById('contact-name')) document.getElementById('contact-name').textContent = t.contactName;
+
+            // Form
+            if (document.getElementById('contact-us-name')) document.getElementById('contact-us-name').textContent = t.contactUsName;
+            if (document.getElementById('contact-us-email')) document.getElementById('contact-us-email').textContent = t.contactUsEmail;
+            if (document.getElementById('contact-us-tel')) document.getElementById('contact-us-tel').textContent = t.contactUsTel;
+            if (document.getElementById('contact-us-subject')) document.getElementById('contact-us-subject').textContent = t.contactUsSubject;
+            if (document.getElementById('contact-us-message')) document.getElementById('contact-us-message').textContent = t.contactUsMessage;
+            if (document.getElementById('contact-us-submit')) {
+                const btnSubmit = document.getElementById('contact-us-submit');
+                btnSubmit.innerHTML = `<span>✉️</span> <span>${t.contactUsSubmit}</span>`;
             }
-            if (window.updateCalendarLanguage) {
-                window.updateCalendarLanguage(lang);
-            }
-            
-            document.getElementById('hero-title').textContent = translations[lang].heroTitle;
-            document.getElementById('hero-subtitle').textContent = translations[lang].heroSubtitle;
 
-            document.getElementById('title-about').textContent = translations[lang].titleAbout;
-            document.getElementById('about-desc').textContent = translations[lang].aboutDesc;
+            if (document.getElementById('name')) document.getElementById('name').placeholder = t.contactUsNamePlaceholder;
+            if (document.getElementById('email')) document.getElementById('email').placeholder = t.contactUsEmailPlaceholder;
+            if (document.getElementById('telephone')) document.getElementById('telephone').placeholder = t.contactUsTelPlaceholder;
+            if (document.getElementById('subject')) document.getElementById('subject').placeholder = t.contactUsSubjectPlaceholder;
+            if (document.getElementById('message')) document.getElementById('message').placeholder = t.contactUsMessagePlaceholder;
 
-            document.getElementById('feat-1').textContent = translations[lang].feat1;
-            document.getElementById('feat-2').textContent = translations[lang].feat2;
-            document.getElementById('feat-3').textContent = translations[lang].feat3;
-            document.getElementById('feat-4').textContent = translations[lang].feat4;
-            document.getElementById('feat-5').textContent = translations[lang].feat5;
-
-            document.getElementById('title-gallery').textContent = translations[lang].titleGallery;
-            document.getElementById('title-prices').textContent = translations[lang].titlePrices;
-            document.getElementById('price-line-1').textContent = translations[lang].priceLine1;
-            document.getElementById('price-line-2').textContent = translations[lang].priceLine2;
-            document.getElementById('price-line-3').textContent = translations[lang].priceLine3;
-            document.getElementById('price-note').textContent = translations[lang].priceNote;
-
-            document.getElementById('title-activities').textContent = translations[lang].titleActivities;
-            document.getElementById('activities-intro').textContent = translations[lang].activitiesIntro;
-
-            document.getElementById('act-1-title').textContent = translations[lang].act1Title;
-            document.getElementById('act-1-desc').textContent = translations[lang].act1Desc;
-            document.getElementById('act-2-title').textContent = translations[lang].act2Title;
-            document.getElementById('act-2-desc').textContent = translations[lang].act2Desc;
-            document.getElementById('act-3-title').textContent = translations[lang].act3Title;
-            document.getElementById('act-3-desc').textContent = translations[lang].act3Desc;
-
-            document.getElementById('title-contact').textContent = translations[lang].titleContact;
-            document.getElementById('title-contact-us').textContent = translations[lang].titleContactUs;
-            document.getElementById('contact-name').innerHTML = translations[lang].contactName;
-            document.getElementById('title-reviews').textContent = translations[lang].titleReviews;
-
-            // Update Buttons State
+            // Language Buttons State
             document.getElementById('btn-hu').classList.remove('active');
             document.getElementById('btn-en').classList.remove('active');
             document.getElementById('btn-de').classList.remove('active');
             document.getElementById('btn-' + lang).classList.add('active');
 
-            // Set lang attribute for accessibility
+            // Set HTML lang attribute
             document.documentElement.lang = lang;
 
-            // Show language specific badge
+            // Szallas.hu badges
             document.getElementById('badge-hu').classList.add('hidden');
             document.getElementById('badge-en').classList.add('hidden');
             document.getElementById('badge-de').classList.add('hidden');
             document.getElementById('badge-' + lang).classList.remove('hidden');
 
-            document.getElementById('contact-us-name').textContent = translations[lang].contactUsName;
-            document.getElementById('contact-us-email').textContent = translations[lang].contactUsEmail;
-            document.getElementById('contact-us-subject').textContent = translations[lang].contactUsSubject;
-            document.getElementById('contact-us-message').textContent = translations[lang].contactUsMessage;
-            document.getElementById('contact-us-submit').textContent = translations[lang].contactUsSubmit;
-            document.getElementById('contact-us-tel').textContent = translations[lang].contactUsTel;
-
-            document.getElementById('email').placeholder = translations[lang].contactUsEmailPlaceholder;
-            document.getElementById('name').placeholder = translations[lang].contactUsNamePlaceholder;
-            document.getElementById('subject').placeholder = translations[lang].contactUsSubjectPlaceholder;
-            document.getElementById('message').placeholder = translations[lang].contactUsMessagePlaceholder;
-            document.getElementById('telephone').placeholder = translations[lang].contactUsTelPlaceholder;
+            // Calendar sync
+            if (window.updateCalendarLanguage) {
+                window.updateCalendarLanguage(lang);
+            }
         }
 
-        var form = document.getElementById("contact-form");
-        setLang('hu')
+        function updateGalleryToggleButtonText(lang) {
+            const btn = document.getElementById('btn-gallery-toggle-text');
+            if (!btn) return;
+            const isExpanded = document.body.classList.contains('gallery-all-visible');
+            const t = translations[lang || document.documentElement.lang || 'hu'];
+            btn.textContent = isExpanded ? t.galleryShowLess : t.galleryShowMore;
+        }
 
-        function encode(data) {
+        // ===== Mobile Menu Toggle =====
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('site-nav-links');
+
+        if (mobileToggle && navLinks) {
+            mobileToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('mobile-open');
+                mobileToggle.setAttribute('aria-expanded', isOpen);
+            });
+
+            // Close mobile menu when clicking any nav anchor
+            navLinks.querySelectorAll('a').forEach(anchor => {
+                anchor.addEventListener('click', () => {
+                    navLinks.classList.remove('mobile-open');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // ===== Gallery Filtering & Show More =====
+        const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const galleryToggleBtn = document.getElementById('btn-gallery-toggle');
+        let currentFilter = 'all';
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.getAttribute('data-filter');
+                applyGalleryFilter();
+            });
+        });
+
+        function applyGalleryFilter() {
+            const isExpanded = document.body.classList.contains('gallery-all-visible');
+
+            galleryItems.forEach(item => {
+                const cat = item.getAttribute('data-category');
+                const matchesFilter = (currentFilter === 'all' || cat === currentFilter);
+                const isInitiallyHidden = item.classList.contains('initially-hidden');
+
+                if (!matchesFilter) {
+                    item.classList.add('hidden-by-filter');
+                } else {
+                    item.classList.remove('hidden-by-filter');
+                    if (isInitiallyHidden && !isExpanded && currentFilter === 'all') {
+                        item.style.display = 'none';
+                    } else {
+                        item.style.display = 'block';
+                    }
+                }
+            });
+
+            // If a specific filter is clicked, hide the "Show more" button
+            if (galleryToggleBtn) {
+                if (currentFilter !== 'all') {
+                    galleryToggleBtn.style.display = 'none';
+                } else {
+                    galleryToggleBtn.style.display = 'inline-flex';
+                }
+            }
+        }
+
+        if (galleryToggleBtn) {
+            galleryToggleBtn.addEventListener('click', () => {
+                const isExpanded = document.body.classList.toggle('gallery-all-visible');
+                const initiallyHiddenItems = document.querySelectorAll('.gallery-item.initially-hidden');
+
+                initiallyHiddenItems.forEach(item => {
+                    if (isExpanded) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                updateGalleryToggleButtonText(document.documentElement.lang);
+            });
+        }
+
+        // ===== Lightbox Implementation =====
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxCounter = document.getElementById('lightbox-counter');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+
+        let visibleGalleryList = [];
+        let currentLightboxIndex = 0;
+
+        function refreshVisibleGalleryList() {
+            visibleGalleryList = Array.from(galleryItems).filter(item => {
+                return !item.classList.contains('hidden-by-filter') && window.getComputedStyle(item).display !== 'none';
+            });
+        }
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                refreshVisibleGalleryList();
+                const idx = visibleGalleryList.indexOf(item);
+                if (idx !== -1) {
+                    openLightbox(idx);
+                }
+            });
+        });
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            updateLightboxContent();
+            lightboxModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateLightboxContent() {
+            if (!visibleGalleryList.length) return;
+            const currentItem = visibleGalleryList[currentLightboxIndex];
+            const imgEl = currentItem.querySelector('img');
+            const caption = currentItem.getAttribute('data-caption') || imgEl.alt;
+
+            lightboxImg.src = imgEl.currentSrc || imgEl.src;
+            lightboxImg.alt = caption;
+            lightboxCaption.textContent = caption;
+            lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${visibleGalleryList.length}`;
+        }
+
+        function showNextImage() {
+            if (!visibleGalleryList.length) return;
+            currentLightboxIndex = (currentLightboxIndex + 1) % visibleGalleryList.length;
+            updateLightboxContent();
+        }
+
+        function showPrevImage() {
+            if (!visibleGalleryList.length) return;
+            currentLightboxIndex = (currentLightboxIndex - 1 + visibleGalleryList.length) % visibleGalleryList.length;
+            updateLightboxContent();
+        }
+
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+        if (lightboxNext) lightboxNext.addEventListener('click', showNextImage);
+        if (lightboxPrev) lightboxPrev.addEventListener('click', showPrevImage);
+
+        // Click backdrop to close
+        if (lightboxModal) {
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) closeLightbox();
+            });
+        }
+
+        // Keyboard controls
+        window.addEventListener('keydown', (e) => {
+            if (!lightboxModal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') showNextImage();
+            if (e.key === 'ArrowLeft') showPrevImage();
+        });
+
+        // ===== Form Submission Handling =====
+        const form = document.getElementById("contact-form");
+
+        function encodeFormData(data) {
             return Object.keys(data)
                 .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
                 .join('&');
         }
 
-        async function handleSubmit(event) {
+        async function handleFormSubmit(event) {
             event.preventDefault();
             const statusEl = document.getElementById("contact-form-status");
-            const lang = document.documentElement.lang;
+            const lang = document.documentElement.lang || 'hu';
             const btn = document.getElementById("contact-us-submit");
 
-            // Collect all named form fields
             const formData = new FormData(event.target);
             const body = {};
             formData.forEach((value, key) => { body[key] = value; });
-            // Netlify requires 'form-name' in the body
             body['form-name'] = 'contact';
 
             btn.disabled = true;
             statusEl.style.color = '';
-            statusEl.innerHTML = '';
+            statusEl.innerHTML = '<span style="color:var(--text-muted)">Üzenet küldése folyamatban...</span>';
 
             fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: encode(body)
+                body: encodeFormData(body)
             }).then(response => {
                 if (response.ok) {
                     form.reset();
-                    statusEl.style.color = 'green';
+                    statusEl.style.color = 'var(--primary-green)';
                     statusEl.innerHTML = translations[lang].contactUsThankYou;
                 } else {
-                    statusEl.style.color = 'red';
+                    statusEl.style.color = 'var(--accent-red)';
                     statusEl.innerHTML = translations[lang].contactUsError;
                 }
             }).catch(() => {
-                statusEl.style.color = 'red';
+                statusEl.style.color = 'var(--accent-red)';
                 statusEl.innerHTML = translations[lang].contactUsError;
             }).finally(() => {
                 btn.disabled = false;
             });
         }
-        form.addEventListener("submit", handleSubmit)
+
+        if (form) {
+            form.addEventListener("submit", handleFormSubmit);
+        }
+
+        // Initialize language
+        setLang('hu');
     </script>
     <script src="calendar.js"></script>
 </body>
+
 </html>
