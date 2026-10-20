@@ -328,6 +328,20 @@
     border-color: #9ab48a !important;
 }
 
+/* --- Minimum 2 Nights Policy Styling --- */
+.day-cell.is-min-nights-unavailable {
+    opacity: 0.6;
+    background-color: #fafbf8 !important;
+    border-style: dashed !important;
+    border-color: #d8ded2 !important;
+    cursor: not-allowed;
+}
+
+.day-cell.is-min-nights-short {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
 /* --- Calendar Legend --- */
 .calendar-legend {
     display: flex;

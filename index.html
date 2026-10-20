@@ -80,6 +80,7 @@
         { "@type": "LocationFeatureSpecification", "name": "Ingyenes parkoló", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Ingyenes Wi-Fi", "value": true }
       ],
+      "petsAllowed": true,
       "availableLanguage": ["Hungarian", "English", "German"],
       "tourBookingPage": "https://tulipanosporta.hu/#booking",
       "sameAs": [
@@ -2313,6 +2314,12 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
+                            <span class="pricing-feature-min-stay">Minimum 2 éjszaka foglalható</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
                             <span>Felszerelt konyha & étkező</span>
                         </li>
                         <li>
@@ -2326,6 +2333,12 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
                             <span>Ingyenes Wi-Fi & zárt parkoló</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span class="pricing-feature-pet-fee">Kisállat (max. 10 kg): 5.000 Ft / éj</span>
                         </li>
                     </ul>
 
@@ -2355,6 +2368,12 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
+                            <span class="pricing-feature-min-stay">Minimum 2 éjszaka foglalható</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
                             <strong>Kerti kád használat</strong>
                         </li>
                         <li>
@@ -2368,6 +2387,12 @@
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
                             <span>Felszerelt konyha, Wi-Fi & parkoló</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span class="pricing-feature-pet-fee">Kisállat (max. 10 kg): 5.000 Ft / éj</span>
                         </li>
                     </ul>
 
@@ -2396,6 +2421,12 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
+                            <span class="pricing-feature-min-stay">Minimum 2 éjszaka foglalható</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
                             <span>Kényelmes, fűtött házikó</span>
                         </li>
                         <li>
@@ -2410,6 +2441,12 @@
                             </svg>
                             <span>Ingyenes Wi-Fi & zárt parkoló</span>
                         </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span class="pricing-feature-pet-fee">Kisállat (max. 10 kg): 5.000 Ft / éj</span>
+                        </li>
                     </ul>
 
                     <a href="#booking" class="btn-pricing-cta">Időpont választása</a>
@@ -2419,8 +2456,8 @@
             <div class="pricing-notice-box">
                 <span class="notice-icon">ℹ️</span>
                 <p class="notice-text" id="price-note">
-                    Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/fő/éj 18 évnél idősebb vendégek esetén) és
-                    az egész házra vonatkoznak legfeljebb 4 fő részére.
+                    A vendégház minimum 2 éjszakára foglalható. Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/fő/éj 18 évnél idősebb vendégek esetén) és
+                    az egész házra vonatkoznak legfeljebb 4 fő részére. Kisállat hozható (max. 10 kg), pótdíj: 5.000 Ft / éj.
                 </p>
             </div>
         </div>
@@ -2433,7 +2470,7 @@
                 <span class="section-eyebrow" id="eyebrow-booking">📅 ONLINE NAPTÁR</span>
                 <h2 class="section-title" id="title-booking">Foglaltsági Naptár</h2>
                 <p class="section-subtitle" id="booking-subtitle">
-                    Tekintse meg szabad időpontjainkat, vagy válassza ki a tervezett érkezés és távozás napját!
+                    Tekintse meg szabad időpontjainkat, vagy válassza ki a tervezett érkezés és távozás napját (minimum 2 éjszaka)!
                 </p>
                 <div class="section-divider"></div>
             </div>
@@ -2711,6 +2748,16 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon-box">🌙</div>
+                            <div>
+                                <div class="contact-item-title" id="contact-policy-title">Foglalási szabályzat</div>
+                                <div class="contact-item-value" id="contact-policy-val" style="font-size: 0.96rem;">
+                                    Minimum 2 éjszaka foglalható
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="map-frame-wrapper">
@@ -2872,7 +2919,12 @@
                 priceLine2: "04.16 – 10.15",
                 priceCard3Title: "Utószezon",
                 priceLine3: "10.16 – 12.31",
-                priceNote: "Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/fő/éj 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak legfeljebb 4 fő részére.",
+                priceMinStay: "Minimum 2 éjszaka foglalható",
+                pricePetFee: "Kisállat (max. 10 kg): 5.000 Ft / éj",
+                priceNote: "A vendégház minimum 2 éjszakára foglalható. Az árak nem tartalmazzák az idegenforgalmi adót (600 Ft/fő/éj 18 évnél idősebb vendégek esetén) és az egész házra vonatkoznak legfeljebb 4 fő részére. Kisállat hozható (max. 10 kg), pótdíj: 5.000 Ft / éj.",
+                bookingSubtitle: "Tekintse meg szabad időpontjainkat, vagy válassza ki a tervezett érkezés és távozás napját (minimum 2 éjszaka)!",
+                contactPolicyTitle: "Foglalási szabályzat",
+                contactPolicyVal: "Minimum 2 éjszaka foglalható",
                 titleContact: "Kapcsolat & Érdeklődés",
                 titleContactUs: "Írjon nekünk",
                 titleReviews: "Vélemények",
@@ -2931,7 +2983,12 @@
                 priceLine2: "04.16 – 10.15",
                 priceCard3Title: "Post-season",
                 priceLine3: "10.16 – 12.31",
-                priceNote: "Prices do not include tourist tax (600 HUF/person/night for guests over 18) and are for the entire house (up to 4 people).",
+                priceMinStay: "Minimum stay: 2 nights",
+                pricePetFee: "Small pets (max. 10 kg): 5,000 HUF / night",
+                priceNote: "A minimum stay of 2 nights is required. Prices do not include tourist tax (600 HUF/person/night for guests over 18) and are for the entire house (up to 4 people). Small pets are welcome (max. 10 kg), surcharge: 5,000 HUF / night.",
+                bookingSubtitle: "Check our available dates or select your planned arrival and departure days (minimum 2 nights)!",
+                contactPolicyTitle: "Booking Policy",
+                contactPolicyVal: "Minimum stay: 2 nights",
                 titleContact: "Contact & Inquiries",
                 titleContactUs: "Send Us a Message",
                 titleReviews: "Reviews",
@@ -2990,7 +3047,12 @@
                 priceLine2: "04.16 – 10.15",
                 priceCard3Title: "Nachsaison",
                 priceLine3: "10.16 – 12.31",
-                priceNote: "Die Preise verstehen sich zzgl. Kurtaxe (600 HUF/Person/Nacht für Gäste ab 18 Jahren) und gelten für das gesamte Haus (bis zu 4 Personen).",
+                priceMinStay: "Mindestaufenthalt: 2 Nächte",
+                pricePetFee: "Kleintiere (max. 10 kg): 5.000 HUF / Nacht",
+                priceNote: "Mindestaufenthalt: 2 Nächte. Die Preise verstehen sich zzgl. Kurtaxe (600 HUF/Person/Nacht für Gäste ab 18 Jahren) und gelten für das gesamte Haus (bis zu 4 Personen). Kleine Haustiere sind willkommen (max. 10 kg), Zuschlag: 5.000 HUF / Nacht.",
+                bookingSubtitle: "Sehen Sie sich freie Termine an oder wählen Sie Ihr geplantes An- und Abreisedatum (mindestens 2 Nächte)!",
+                contactPolicyTitle: "Buchungsrichtlinie",
+                contactPolicyVal: "Mindestaufenthalt: 2 Nächte",
                 titleContact: "Kontakt & Anfragen",
                 titleContactUs: "Kontaktieren Sie uns",
                 titleReviews: "Bewertungen",
@@ -3081,6 +3143,11 @@
             if (document.getElementById('price-card-3-title')) document.getElementById('price-card-3-title').textContent = t.priceCard3Title;
             if (document.getElementById('price-line-3')) document.getElementById('price-line-3').textContent = t.priceLine3;
             if (document.getElementById('price-note')) document.getElementById('price-note').textContent = t.priceNote;
+            document.querySelectorAll('.pricing-feature-min-stay').forEach(el => el.textContent = t.priceMinStay);
+            document.querySelectorAll('.pricing-feature-pet-fee').forEach(el => el.textContent = t.pricePetFee);
+
+            // Booking
+            if (document.getElementById('booking-subtitle')) document.getElementById('booking-subtitle').textContent = t.bookingSubtitle;
 
             // Reviews
             if (document.getElementById('title-reviews')) document.getElementById('title-reviews').textContent = t.titleReviews;
@@ -3089,6 +3156,8 @@
             if (document.getElementById('title-contact')) document.getElementById('title-contact').textContent = t.titleContact;
             if (document.getElementById('title-contact-us')) document.getElementById('title-contact-us').textContent = t.titleContactUs;
             if (document.getElementById('contact-name')) document.getElementById('contact-name').textContent = t.contactName;
+            if (document.getElementById('contact-policy-title')) document.getElementById('contact-policy-title').textContent = t.contactPolicyTitle;
+            if (document.getElementById('contact-policy-val')) document.getElementById('contact-policy-val').textContent = t.contactPolicyVal;
 
             // Form
             if (document.getElementById('contact-us-name')) document.getElementById('contact-us-name').textContent = t.contactUsName;

@@ -48,6 +48,11 @@
         googleAllDayEndIsExclusive: true,
 
         /**
+         * Minimum consecutive nights policy
+         */
+        minNights: 2,
+
+        /**
          * Pricing per night (matching the website's prices)
          */
         pricing: {
@@ -64,7 +69,7 @@
     const CALENDAR_I18N = {
         hu: {
             bookingSectionTitle: 'Foglaltsági Naptár',
-            bookingSectionSubtitle: 'Tekintse meg szabad időpontjainkat, vagy válassza ki a tervezett érkezés és távozás napját!',
+            bookingSectionSubtitle: 'Tekintse meg szabad időpontjainkat, vagy válassza ki a tervezett érkezés és távozás napját (minimum 2 éjszaka)!',
             today: 'Ma',
             prevMonth: 'Előző hónap',
             nextMonth: 'Következő hónap',
@@ -75,8 +80,8 @@
             legendCheckIn: 'Érkezési nap (délután)',
             legendCheckOut: 'Távozási nap (délelőtt)',
             legendSelected: 'Kiválasztva',
-            promptSelectDates: 'Kattintson az érkezési és távozási napra a naptárban a foglalási igényhez.',
-            promptSelectDeparture: 'Most kattintson a távozás napjára!',
+            promptSelectDates: 'Kattintson az érkezési és távozási napra a naptárban a foglalási igényhez (minimum 2 éjszaka).',
+            promptSelectDeparture: 'Most kattintson a távozás napjára (legalább 2 éjszaka)!',
             selectedArrival: 'Érkezés',
             selectedDeparture: 'Távozás',
             selectedNights: 'Éjszakák',
@@ -85,6 +90,8 @@
             btnBookNow: 'Foglalási érdeklődés elküldése',
             btnClear: 'Kijelölés törlése',
             conflictAlert: 'A kiválasztott időszak már foglalt napot tartalmaz! Kérjük válasszon másik időpontot.',
+            minNightsAlert: 'A minimális foglalási idő 2 éjszaka! Kérjük, válasszon későbbi távozási napot.',
+            minNightsUnavailableAlert: 'Ezen a napon nem indítható foglalás, mert legalább 2 egymást követő szabad éjszaka szükséges.',
             nightUnit: 'éjszaka',
             weekdays: ['H', 'K', 'Sze', 'Cs', 'P', 'Szo', 'V'],
             months: ['Január', 'Február', 'Március', 'Április', 'Május', 'Június', 'Július', 'Augusztus', 'Szeptember', 'Október', 'November', 'December'],
@@ -104,7 +111,7 @@ Kérném az időpont megerősítését és a foglalás részleteit.
         },
         en: {
             bookingSectionTitle: 'Availability Calendar',
-            bookingSectionSubtitle: 'Check our available dates or select your planned arrival and departure days!',
+            bookingSectionSubtitle: 'Check our available dates or select your planned arrival and departure days (minimum 2 nights)!',
             today: 'Today',
             prevMonth: 'Previous month',
             nextMonth: 'Next month',
@@ -115,8 +122,8 @@ Kérném az időpont megerősítését és a foglalás részleteit.
             legendCheckIn: 'Check-in day (afternoon)',
             legendCheckOut: 'Check-out day (morning)',
             legendSelected: 'Selected',
-            promptSelectDates: 'Click on your arrival and departure dates on the calendar to make a reservation request.',
-            promptSelectDeparture: 'Now click on your departure date!',
+            promptSelectDates: 'Click on your arrival and departure dates on the calendar to make a reservation request (minimum 2 nights).',
+            promptSelectDeparture: 'Now click on your departure date (minimum 2 nights)!',
             selectedArrival: 'Arrival',
             selectedDeparture: 'Departure',
             selectedNights: 'Nights',
@@ -125,6 +132,8 @@ Kérném az időpont megerősítését és a foglalás részleteit.
             btnBookNow: 'Send Booking Inquiry',
             btnClear: 'Clear Selection',
             conflictAlert: 'The selected period overlaps with already booked dates! Please choose different dates.',
+            minNightsAlert: 'Minimum stay is 2 consecutive nights! Please select a later departure date.',
+            minNightsUnavailableAlert: 'A reservation cannot start on this day because at least 2 consecutive available nights are required.',
             nightUnit: 'nights',
             weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -144,7 +153,7 @@ Kind regards,`
         },
         de: {
             bookingSectionTitle: 'Belegungskalender',
-            bookingSectionSubtitle: 'Sehen Sie sich freie Termine an oder wählen Sie Ihr geplantes An- und Abreisedatum!',
+            bookingSectionSubtitle: 'Sehen Sie sich freie Termine an oder wählen Sie Ihr geplantes An- und Abreisedatum (mindestens 2 Nächte)!',
             today: 'Heute',
             prevMonth: 'Vorheriger Monat',
             nextMonth: 'Nächster Monat',
@@ -155,8 +164,8 @@ Kind regards,`
             legendCheckIn: 'Anreisetag (Nachmittag)',
             legendCheckOut: 'Abreisetag (Vormittag)',
             legendSelected: 'Ausgewählt',
-            promptSelectDates: 'Klicken Sie auf Anreise- und Abreisedatum im Kalender für eine Buchungsanfrage.',
-            promptSelectDeparture: 'Wählen Sie nun das Abreisedatum!',
+            promptSelectDates: 'Klicken Sie auf Anreise- und Abreisedatum im Kalender für eine Buchungsanfrage (mindestens 2 Nächte).',
+            promptSelectDeparture: 'Wählen Sie nun das Abreisedatum (mindestens 2 Nächte)!',
             selectedArrival: 'Anreise',
             selectedDeparture: 'Abreise',
             selectedNights: 'Nächte',
@@ -165,6 +174,8 @@ Kind regards,`
             btnBookNow: 'Buchungsanfrage senden',
             btnClear: 'Zurücksetzen',
             conflictAlert: 'Der gewählte Zeitraum überschneidet sich mit belegten Tagen! Bitte wählen Sie andere Daten.',
+            minNightsAlert: 'Mindestaufenthalt: 2 aufeinanderfolgende Nächte! Bitte wählen Sie ein späteres Abreisedatum.',
+            minNightsUnavailableAlert: 'Eine Buchung kann an diesem Tag nicht beginnen, da mindestens 2 aufeinanderfolgende freie Nächte erforderlich sind.',
             nightUnit: 'Nächte',
             weekdays: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'],
             months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
@@ -463,18 +474,40 @@ Mit freundlichen Grüßen,`
     // =========================================================================
     // 7. DATE SELECTION LOGIC
     // =========================================================================
+    function canStartBookingOn(dateKey, dayStatus) {
+        const todayKey = getTodayKey();
+        if (dateKey < todayKey) return false;
+        if (dayStatus === 'booked' || dayStatus === 'arrival' || dayStatus === 'turnover') return false;
+        if (state.bookedNightsSet.has(dateKey)) return false;
+
+        // For a minimum 2 consecutive nights policy, Night 0 (dateKey) and Night 1 (dateKey + 1 day) must both be free
+        const nextDayKey = addDays(dateKey, 1);
+        if (state.bookedNightsSet.has(nextDayKey)) return false;
+        // If someone else arrives on nextDayKey, checkout would be forced on nextDayKey morning (only 1 night)
+        if (state.arrivalsSet.has(nextDayKey)) return false;
+
+        // And day after next (checkout day) cannot be in the middle of a booking or a turnover
+        const day2Key = addDays(dateKey, 2);
+        const day2Status = getDayStatus(day2Key);
+        if (day2Status === 'booked' || day2Status === 'turnover') return false;
+
+        return true;
+    }
+
     function handleDayClick(dateKey, dayStatus) {
         const todayKey = getTodayKey();
         if (dateKey < todayKey) return; // past date
 
         hideAlert();
 
-        // 1. If no arrival is selected yet, or if both were already selected: start fresh
+        // 1. If no arrival is selected yet, or if both arrival and departure were already selected: start fresh
         if (!state.selectedArrival || (state.selectedArrival && state.selectedDeparture)) {
-            // Can this day be an arrival day?
-            // A day can be an arrival day if it is free, OR if someone is checking out on this day (leave day).
             if (dayStatus === 'booked' || dayStatus === 'arrival' || dayStatus === 'turnover') {
                 showAlert(CALENDAR_I18N[state.currentLang].conflictAlert);
+                return;
+            }
+            if (!canStartBookingOn(dateKey, dayStatus)) {
+                showAlert(CALENDAR_I18N[state.currentLang].minNightsUnavailableAlert);
                 return;
             }
             state.selectedArrival = dateKey;
@@ -485,15 +518,26 @@ Mit freundlichen Grüßen,`
 
         // 2. We have selectedArrival, now picking selectedDeparture
         if (state.selectedArrival && !state.selectedDeparture) {
-            // If user clicks the same day or an earlier day, reset arrival to this day
-            if (dateKey <= state.selectedArrival) {
+            // If user clicks an earlier day, reset arrival to this day if valid
+            if (dateKey < state.selectedArrival) {
                 if (dayStatus === 'booked' || dayStatus === 'arrival' || dayStatus === 'turnover') {
                     showAlert(CALENDAR_I18N[state.currentLang].conflictAlert);
+                    return;
+                }
+                if (!canStartBookingOn(dateKey, dayStatus)) {
+                    showAlert(CALENDAR_I18N[state.currentLang].minNightsUnavailableAlert);
                     return;
                 }
                 state.selectedArrival = dateKey;
                 state.selectedDeparture = null;
                 renderCalendar();
+                return;
+            }
+
+            // If user clicks the same day or only 1 night from arrival:
+            const nights = diffDays(state.selectedArrival, dateKey);
+            if (nights < 2) {
+                showAlert(CALENDAR_I18N[state.currentLang].minNightsAlert);
                 return;
             }
 
@@ -505,7 +549,17 @@ Mit freundlichen Grüßen,`
                     hasConflict = true;
                     break;
                 }
+                if (check > state.selectedArrival && state.arrivalsSet.has(check)) {
+                    hasConflict = true;
+                    break;
+                }
                 check = addDays(check, 1);
+            }
+
+            // Also check that the departure day itself is not in the middle of a booking or turnover
+            const depStatus = getDayStatus(dateKey);
+            if (depStatus === 'booked' || depStatus === 'turnover') {
+                hasConflict = true;
             }
 
             if (hasConflict) {
@@ -514,6 +568,7 @@ Mit freundlichen Grüßen,`
             }
 
             state.selectedDeparture = dateKey;
+            hideAlert();
             renderCalendar();
         }
     }
@@ -548,6 +603,11 @@ Mit freundlichen Grüßen,`
 
         const i18n = CALENDAR_I18N[state.currentLang];
         const pricingData = calculatePriceForRange(state.selectedArrival, state.selectedDeparture);
+        if (pricingData.nights < 2) {
+            showAlert(i18n.minNightsAlert);
+            return;
+        }
+
         const arrivalFmt = formatDisplayDate(state.selectedArrival, state.currentLang);
         const departureFmt = formatDisplayDate(state.selectedDeparture, state.currentLang);
         const priceFmt = formatNumber(pricingData.total);
@@ -664,6 +724,15 @@ Mit freundlichen Grüßen,`
                 if (dateKey > state.selectedArrival && dateKey < state.selectedDeparture) {
                     dayCell.classList.add('is-in-range');
                 }
+            }
+
+            // Visual feedback for minimum nights policy
+            if (state.selectedArrival && !state.selectedDeparture && dateKey === addDays(state.selectedArrival, 1)) {
+                dayCell.classList.add('is-min-nights-short');
+                dayCell.setAttribute('title', i18n.minNightsAlert);
+            } else if (!state.selectedArrival && dateKey >= todayKey && (status === 'available' || status === 'leave') && !canStartBookingOn(dateKey, status)) {
+                dayCell.classList.add('is-min-nights-unavailable');
+                dayCell.setAttribute('title', i18n.minNightsUnavailableAlert);
             }
 
             // Accessibility labels
